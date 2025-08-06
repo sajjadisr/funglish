@@ -1,0 +1,627 @@
+
+[
+  {
+    "id": "dog-and-shadow",
+    "title": "The Dog and His Shadow",
+    "level": "A1",
+    "sentences": [
+      { "en": "A Dog was carrying a piece of meat in his mouth.", "fa": "سگی تکه‌ای گوشت را در دهانش حمل می‌کرد." },
+      { "en": "As he walked, he saw his shadow in the water.", "fa": "وقتی راه می‌رفت، سایه‌اش را در آب دید." },
+      { "en": "He thought it was another dog with a bigger piece of meat.", "fa": "او فکر کرد سایه‌اش یک سگ دیگر با تکه گوشتی بزرگ‌تر است." },
+      { "en": "He opened his mouth to bark, and dropped his meat.", "fa": "دهانش را باز کرد تا پارس کند و گوشتش افتاد." },
+      { "en": "He lost his meat and his shadow.", "fa": "او هم گوشت و هم سایه‌اش را از دست داد." }
+    ]
+  },
+  {
+    "id": "lion-and-mouse",
+    "title": "The Lion and the Mouse",
+    "level": "A1",
+    "sentences": [
+      { "en": "A Lion was sleeping in the forest.", "fa": "شیری در جنگل خوابیده بود." },
+      { "en": "A Mouse ran over his face.", "fa": "موشی روی صورت او دوید." },
+      { "en": "The Lion woke up and caught the Mouse.", "fa": "شیر بیدار شد و موش را گرفت." },
+      { "en": "The Mouse begged to be freed.", "fa": "موش خواهش کرد که آزاد شود." },
+      { "en": "Later, the Mouse saved the Lion from a net.", "fa": "بعدها موش شیر را از تور نجات داد." }
+    ]
+  },
+  {
+    "id": "boy-who-cried-wolf",
+    "title": "The Boy Who Cried Wolf",
+    "level": "A1",
+    "sentences": [
+      { "en": "A boy watched sheep near a village.", "fa": "پسری در نزدیکی روستا گوسفندان را نگهبانی می‌کرد." },
+      { "en": "He shouted 'Wolf!' to trick the villagers.", "fa": "او برای فریب روستاییان فریاد زد 'گرگ!'" },
+      { "en": "The villagers came, but there was no wolf.", "fa": "روستاییان آمدند اما گرگی نبود." },
+      { "en": "He did it again and again.", "fa": "او این کار را بارها تکرار کرد." },
+      { "en": "When a real wolf came, no one believed him.", "fa": "وقتی واقعا گرگ آمد، کسی حرفش را باور نکرد." }
+    ]
+  },
+  {
+    "id": "tortoise-and-hare",
+    "title": "The Tortoise and the Hare",
+    "level": "A1",
+    "sentences": [
+      { "en": "A hare made fun of a slow tortoise.", "fa": "یک خرگوش به لاک‌پشت کند می‌خندید." },
+      { "en": "They decided to race.", "fa": "تصمیم گرفتند مسابقه بدهند." },
+      { "en": "The hare slept during the race.", "fa": "خرگوش در مسابقه خوابید." },
+      { "en": "The tortoise kept going and won.", "fa": "لاک‌پشت به راهش ادامه داد و برنده شد." },
+      { "en": "Slow and steady wins the race.", "fa": "آهسته و پیوسته برنده می‌شود." }
+    ]
+  },
+  {
+    "id": "ant-and-grasshopper",
+    "title": "The Ant and the Grasshopper",
+    "level": "A1",
+    "sentences": [
+      { "en": "A grasshopper sang all summer.", "fa": "یک ملخ تمام تابستان آواز خواند." },
+      { "en": "The ant worked hard to store food.", "fa": "مورچه سخت کار کرد تا غذا ذخیره کند." },
+      { "en": "Winter came and the grasshopper was hungry.", "fa": "زمستان آمد و ملخ گرسنه شد." },
+      { "en": "He asked the ant for food.", "fa": "او از مورچه غذا خواست." },
+      { "en": "The ant said, 'You should have worked!'", "fa": "مورچه گفت: 'باید کار می‌کردی!'" }
+    ]
+  },
+  {
+    "id": "fox-and-grapes",
+    "title": "The Fox and the Grapes",
+    "level": "A2",
+    "sentences": [
+      { "en": "A fox saw some grapes.", "fa": "روباهی چند خوشه انگور دید." },
+      { "en": "He tried to reach them but could not.", "fa": "سعی کرد به آن‌ها برسد اما نتوانست." },
+      { "en": "He said, 'They are probably sour.'", "fa": "گفت: 'احتمالا ترش هستند.'" },
+      { "en": "He walked away.", "fa": "او دور شد." },
+      { "en": "We call this 'sour grapes.'", "fa": "ما به این می‌گوییم 'انگور ترش'." }
+    ]
+  },
+  {
+    "id": "goose-golden-eggs",
+    "title": "The Goose That Laid the Golden Eggs",
+    "level": "A2",
+    "sentences": [
+      { "en": "A farmer had a goose.", "fa": "کشاورزی یک غاز داشت." },
+      { "en": "She laid a golden egg every day.", "fa": "هر روز یک تخم طلایی می‌گذاشت." },
+      { "en": "The farmer wanted all the gold at once.", "fa": "کشاورز همه طلاها را یکباره می‌خواست." },
+      { "en": "He killed the goose, but found nothing.", "fa": "غاز را کشت اما چیزی پیدا نکرد." },
+      { "en": "Greed can ruin everything.", "fa": "حرص و طمع می‌تواند همه چیز را خراب کند." }
+    ]
+  },
+  {
+    "id": "city-mouse-country-mouse",
+    "title": "The City Mouse and the Country Mouse",
+    "level": "A2",
+    "sentences": [
+      { "en": "A city mouse visited his cousin in the country.", "fa": "یک موش شهری به دیدار پسرعمویش در روستا رفت." },
+      { "en": "He found life simple but safe.", "fa": "زندگی را ساده اما امن یافت." },
+      { "en": "He invited the country mouse to the city.", "fa": "موش روستایی را به شهر دعوت کرد." },
+      { "en": "City life was rich but dangerous.", "fa": "زندگی شهری پر زرق و برق اما خطرناک بود." },
+      { "en": "Better a simple life with peace.", "fa": "زندگی ساده با آرامش بهتر است." }
+    ]
+  },
+  {
+    "id": "milkmaid-dreams",
+    "title": "The Milkmaid and Her Pail",
+    "level": "A2",
+    "sentences": [
+      { "en": "A milkmaid carried a pail of milk on her head.", "fa": "دختر شیر فروش سطلی شیر روی سرش حمل می‌کرد." },
+      { "en": "She dreamed of selling the milk.", "fa": "او در رویا فروش شیر را می‌دید." },
+      { "en": "She imagined buying chickens.", "fa": "تصور کرد مرغ می‌خرد." },
+      { "en": "She walked proudly and spilled the milk.", "fa": "با غرور راه رفت و شیر را ریخت." },
+      { "en": "Don't count your chickens before they hatch.", "fa": "تا جوجه‌هایتان درنیامده‌اند، نشماریدشان." }
+    ]
+  },
+  {
+    "id": "shepherds-boy",
+    "title": "The Shepherd's Boy and the Wolf",
+    "level": "A2",
+    "sentences": [
+      { "en": "A shepherd's boy called 'Wolf!' for fun.", "fa": "پسر چوپان برای شوخی فریاد زد 'گرگ!'" },
+      { "en": "People came to help, but there was no wolf.", "fa": "مردم آمدند اما گرگی نبود." },
+      { "en": "He did it again.", "fa": "او دوباره این کار را کرد." },
+      { "en": "When a real wolf came, nobody believed him.", "fa": "وقتی گرگ واقعی آمد، هیچ‌کس حرفش را باور نکرد." },
+      { "en": "Honesty is important.", "fa": "صداقت مهم است." }
+    ]
+  },
+  {
+    "id": "crow-pitcher",
+    "title": "The Crow and the Pitcher",
+    "level": "A2",
+    "sentences": [
+      { "en": "A thirsty crow found a pitcher with little water.", "fa": "کلاغ تشنه کوزه‌ای با کمی آب پیدا کرد." },
+      { "en": "He could not reach the water.", "fa": "نمی‌توانست به آب برسد." },
+      { "en": "He dropped stones into the pitcher.", "fa": "سنگ‌هایی داخل کوزه انداخت." },
+      { "en": "The water rose and he drank.", "fa": "آب بالا آمد و او نوشید." },
+      { "en": "Necessity is the mother of invention.", "fa": "نیاز مادر اختراع است." }
+    ]
+  },
+  {
+    "id": "wind-and-sun",
+    "title": "The Wind and the Sun",
+    "level": "A2",
+    "sentences": [
+      { "en": "The wind and sun argued about who was stronger.", "fa": "باد و خورشید درباره اینکه کدام قوی‌تر است بحث کردند." },
+      { "en": "They saw a traveler with a coat.", "fa": "آن‌ها مسافری با یک کت دیدند." },
+      { "en": "Wind blew hard, but the man held his coat.", "fa": "باد شدید وزید اما مرد کت خود را گرفت." },
+      { "en": "The sun shone warmly, and the man removed his coat.", "fa": "خورشید گرم تابید و مرد کت را درآورد." },
+      { "en": "Gentleness works better than force.", "fa": "مهربانی بهتر از زور است." }
+    ]
+  },
+  {
+    "id": "wolf-sheep-clothing",
+    "title": "The Wolf in Sheep's Clothing",
+    "level": "A2",
+    "sentences": [
+      { "en": "A wolf dressed in sheep's clothing.", "fa": "گرگی لباس گوسفند پوشید." },
+      { "en": "He entered the flock easily.", "fa": "او به راحتی وارد گله شد." },
+      { "en": "But the shepherd discovered him.", "fa": "اما چوپان او را شناخت." },
+      { "en": "Appearances can be deceiving.", "fa": "ظاهر می‌تواند فریب‌دهنده باشد." },
+      { "en": "Be careful who you trust.", "fa": "مراقب باشید به چه کسی اعتماد می‌کنید." }
+    ]
+  },
+  {
+    "id": "old-lion",
+    "title": "The Old Lion and the Fox",
+    "level": "A2",
+    "sentences": [
+      { "en": "An old lion could not hunt anymore.", "fa": "یک شیر پیر دیگر نمی‌توانست شکار کند." },
+      { "en": "He pretended to be sick.", "fa": "خود را بیمار نشان داد." },
+      { "en": "Animals visited him and he ate them.", "fa": "حیوانات به دیدارش رفتند و او آن‌ها را خورد." },
+      { "en": "The fox noticed no animal came out.", "fa": "روباه دید هیچ حیوانی بیرون نمی‌آید." },
+      { "en": "He stayed away and was safe.", "fa": "روباه دوری کرد و سالم ماند." }
+    ]
+  },
+  {
+    "id": "silly-crow",
+    "title": "The Silly Crow",
+    "level": "A1",
+    "sentences": [
+      { "en": "A crow wanted to look beautiful.", "fa": "یک کلاغ می‌خواست زیبا باشد." },
+      { "en": "He put peacock feathers on himself.", "fa": "پر طاووس روی خود گذاشت." },
+      { "en": "Other crows laughed at him.", "fa": "کلاغ‌های دیگر به او خندیدند." },
+      { "en": "He lost his own feathers.", "fa": "پرهای خودش را هم از دست داد." },
+      { "en": "Be yourself.", "fa": "خودت باش." }
+    ]
+  },
+  {
+    "id": "farmer-and-stork",
+    "title": "The Farmer and the Stork",
+    "level": "A2",
+    "sentences": [
+      { "en": "A farmer set a net for cranes.", "fa": "کشاورزی دام برای درناها گذاشت." },
+      { "en": "A stork was caught too.", "fa": "یک لک‌لک هم گرفتار شد." },
+      { "en": "The stork begged for mercy.", "fa": "لک‌لک طلب بخشش کرد." },
+      { "en": "The farmer said, 'You are judged by the company you keep.'", "fa": "کشاورز گفت: 'به خاطر همراهانت قضاوت می‌شوی.'" },
+      { "en": "Choose your friends wisely.", "fa": "دوستانت را عاقلانه انتخاب کن." }
+    ]
+  },
+  {
+    "id": "mouse-lion",
+    "title": "The Mouse and the Lion",
+    "level": "A1",
+    "sentences": [
+      { "en": "A mouse helped a lion escape a trap.", "fa": "موشی به شیری کمک کرد تا از دام فرار کند." },
+      { "en": "The lion had spared the mouse before.", "fa": "شیر قبلاً موش را بخشیده بود." },
+      { "en": "A good deed is never wasted.", "fa": "کار خوب هرگز هدر نمی‌رود." },
+      { "en": "Help others and you may be helped.", "fa": "به دیگران کمک کن تا به تو کمک شود." },
+      { "en": "Even the small can help the great.", "fa": "حتی کوچک‌ها هم می‌توانند به بزرگ‌ها کمک کنند." }
+    ]
+  },
+  {
+    "id": "bundle-sticks",
+    "title": "The Bundle of Sticks",
+    "level": "A2",
+    "sentences": [
+      { "en": "A father gave his sons a bundle of sticks.", "fa": "پدری به پسرانش یک دسته چوب داد." },
+      { "en": "He asked them to break it.", "fa": "از آن‌ها خواست آن را بشکنند." },
+      { "en": "They could not break the bundle.", "fa": "نتوانستند دسته را بشکنند." },
+      { "en": "When separated, the sticks broke easily.", "fa": "وقتی چوب‌ها جدا شدند، به راحتی شکستند." },
+      { "en": "Unity is strength.", "fa": "اتحاد قدرت است." }
+    ]
+  },
+  {
+    "id": "hungry-dog",
+    "title": "The Hungry Dog",
+    "level": "A1",
+    "sentences": [
+      { "en": "A hungry dog found a bone.", "fa": "سگی گرسنه یک استخوان پیدا کرد." },
+      { "en": "He guarded it fiercely.", "fa": "با شدت از آن محافظت کرد." },
+      { "en": "He lost friends for being greedy.", "fa": "به خاطر حرص دوستانش را از دست داد." },
+      { "en": "Greed leads to loneliness.", "fa": "حرص باعث تنهایی می‌شود." },
+      { "en": "Share and be happy.", "fa": "تقسیم کن و خوشحال باش." }
+    ]
+  },
+  {
+    "id": "oak-and-reed",
+    "title": "The Oak and the Reed",
+    "level": "A2",
+    "sentences": [
+      { "en": "An oak tree was strong and proud.", "fa": "درخت بلوط قوی و مغرور بود." },
+      { "en": "A reed was weak but flexible.", "fa": "نی ضعیف اما انعطاف‌پذیر بود." },
+      { "en": "A storm came.", "fa": "طوفان آمد." },
+      { "en": "The oak broke, the reed bent and survived.", "fa": "بلوط شکست اما نی خم شد و زنده ماند." },
+      { "en": "Flexibility is strength.", "fa": "انعطاف‌پذیری قدرت است." }
+    ]
+  },
+  {
+    "id": "elephant-and-friends",
+    "title": "The Elephant and His Friends",
+    "level": "A1",
+    "sentences": [
+      { "en": "An elephant wanted friends.", "fa": "یک فیل به دنبال دوست بود." },
+      { "en": "He was rejected by many animals.", "fa": "بسیاری از حیوانات او را رد کردند." },
+      { "en": "He saved them from a hunter.", "fa": "آن‌ها را از شکارچی نجات داد." },
+      { "en": "They accepted him as a friend.", "fa": "او را به عنوان دوست پذیرفتند." },
+      { "en": "True friends see your heart.", "fa": "دوستان واقعی قلبت را می‌بینند." }
+    ]
+  },
+  {
+    "id": "clever-monkey",
+    "title": "The Clever Monkey",
+    "level": "A1",
+    "sentences": [
+      { "en": "A monkey lived on a tree by a river.", "fa": "میمونی روی درخت کنار رودخانه زندگی می‌کرد." },
+      { "en": "A crocodile wanted to eat his heart.", "fa": "یک تمساح می‌خواست قلب او را بخورد." },
+      { "en": "The monkey tricked the crocodile.", "fa": "میمون تمساح را فریب داد." },
+      { "en": "He saved himself with wit.", "fa": "با زیرکی خودش را نجات داد." },
+      { "en": "Intelligence can save you.", "fa": "هوش می‌تواند تو را نجات دهد." }
+    ]
+  },
+  {
+    "id": "thirsty-crow",
+    "title": "The Thirsty Crow",
+    "level": "A1",
+    "sentences": [
+      { "en": "A crow was very thirsty.", "fa": "کلاغی خیلی تشنه بود." },
+      { "en": "He found a pot with little water.", "fa": "کوزه‌ای با کمی آب پیدا کرد." },
+      { "en": "He put stones in the pot.", "fa": "سنگ‌هایی در کوزه انداخت." },
+      { "en": "The water rose and he drank.", "fa": "آب بالا آمد و نوشید." },
+      { "en": "Where there is a will, there is a way.", "fa": "خواستن توانستن است." }
+    ]
+  },
+  {
+    "id": "honest-woodcutter",
+    "title": "The Honest Woodcutter",
+    "level": "A2",
+    "sentences": [
+      { "en": "A woodcutter dropped his axe in a river.", "fa": "نجاری تبرش را در رودخانه انداخت." },
+      { "en": "A fairy showed him a golden axe.", "fa": "پری به او تبر طلایی نشان داد." },
+      { "en": "He said it was not his.", "fa": "گفت مال او نیست." },
+      { "en": "She gave him the golden, silver, and his own axe.", "fa": "پری هم تبر طلایی، هم نقره‌ای و هم تبر خودش را به او داد." },
+      { "en": "Honesty is rewarded.", "fa": "صداقت پاداش داده می‌شود." }
+    ]
+  },
+  {
+    "id": "greedy-dog",
+    "title": "The Greedy Dog",
+    "level": "A1",
+    "sentences": [
+      { "en": "A dog found a bone.", "fa": "سگی استخوانی پیدا کرد." },
+      { "en": "He saw his reflection in the water.", "fa": "انعکاسش را در آب دید." },
+      { "en": "He thought it was another dog.", "fa": "فکر کرد سگ دیگری است." },
+      { "en": "He tried to grab the bone and lost his own.", "fa": "خواست استخوان را بگیرد و استخوان خودش را از دست داد." },
+      { "en": "Don't be greedy.", "fa": "حریص نباش." }
+    ]
+  },
+  {
+    "id": "bear-and-two-friends",
+    "title": "The Bear and Two Friends",
+    "level": "A2",
+    "sentences": [
+      { "en": "Two friends met a bear in the forest.", "fa": "دو دوست در جنگل با یک خرس روبرو شدند." },
+      { "en": "One climbed a tree, the other lay on the ground.", "fa": "یکی از آن‌ها از درخت بالا رفت، دیگری روی زمین دراز کشید." },
+      { "en": "The bear sniffed him and went away.", "fa": "خرس او را بو کرد و رفت." },
+      { "en": "True friends never leave you.", "fa": "دوستان واقعی تو را تنها نمی‌گذارند." },
+      { "en": "Choose your friends wisely.", "fa": "دوستانت را عاقلانه انتخاب کن." }
+    ]
+  },
+  {
+    "id": "rooster-and-pearl",
+    "title": "The Rooster and the Pearl",
+    "level": "A2",
+    "sentences": [
+      { "en": "A rooster found a pearl.", "fa": "خروسی یک مروارید پیدا کرد." },
+      { "en": "He had no use for it.", "fa": "برای او فایده‌ای نداشت." },
+      { "en": "He wanted food, not jewels.", "fa": "او غذا می‌خواست نه جواهر." },
+      { "en": "Value what is useful to you.", "fa": "چیزی را که برایت مفید است ارزش بدان." },
+      { "en": "Not everything shiny is valuable.", "fa": "هر چیز درخشانی باارزش نیست." }
+    ]
+  },
+  {
+    "id": "horse-and-donkey",
+    "title": "The Horse and the Donkey",
+    "level": "A2",
+    "sentences": [
+      { "en": "A donkey asked a horse for help with his load.", "fa": "الاغ از اسب خواست کمکش کند بارش را حمل کند." },
+      { "en": "The horse refused.", "fa": "اسب قبول نکرد." },
+      { "en": "The donkey died.", "fa": "الاغ مرد." },
+      { "en": "The horse had to carry the whole load.", "fa": "اسب مجبور شد کل بار را حمل کند." },
+      { "en": "Help others before it's too late.", "fa": "قبل از اینکه دیر شود به دیگران کمک کن." }
+    ]
+  },
+  {
+    "id": "wolf-goat-kid",
+    "title": "The Wolf and the Goat Kid",
+    "level": "A1",
+    "sentences": [
+      { "en": "A young goat was left alone.", "fa": "یک بزغاله تنها ماند." },
+      { "en": "A wolf tried to trick him.", "fa": "گرگی سعی کرد او را فریب دهد." },
+      { "en": "The kid sang loudly.", "fa": "بزغاله با صدای بلند آواز خواند." },
+      { "en": "The shepherd heard and saved him.", "fa": "چوپان شنید و او را نجات داد." },
+      { "en": "Be smart in danger.", "fa": "در خطر باهوش باش." }
+    ]
+  },
+  {
+    "id": "peacock-and-crane",
+    "title": "The Peacock and the Crane",
+    "level": "A2",
+    "sentences": [
+      { "en": "A peacock boasted about his feathers.", "fa": "طاووس به پرهایش می‌بالید." },
+      { "en": "A crane said he could fly high.", "fa": "درنا گفت می‌تواند بلند پرواز کند." },
+      { "en": "It's better to be useful than beautiful.", "fa": "مفید بودن بهتر از زیبا بودن است." },
+      { "en": "Show off less, do more.", "fa": "کمتر فخر بفروش، بیشتر عمل کن." },
+      { "en": "Everyone has their own strengths.", "fa": "هر کسی نقاط قوت خودش را دارد." }
+    ]
+  },
+  {
+    "id": "farmer-and-goose",
+    "title": "The Farmer and the Goose",
+    "level": "A1",
+    "sentences": [
+      { "en": "A farmer had a goose.", "fa": "کشاورزی یک غاز داشت." },
+      { "en": "She laid golden eggs.", "fa": "او تخم طلایی می‌گذاشت." },
+      { "en": "The farmer wanted more and killed her.", "fa": "کشاورز بیشتر می‌خواست و او را کشت." },
+      { "en": "He got nothing.", "fa": "هیچ چیز به دست نیاورد." },
+      { "en": "Greed destroys blessings.", "fa": "حرص نعمت را از بین می‌برد." }
+    ]
+  },
+  {
+    "id": "crow-and-swan",
+    "title": "The Crow and the Swan",
+    "level": "A2",
+    "sentences": [
+      { "en": "A crow wanted to be as white as a swan.", "fa": "کلاغ می‌خواست مثل قو سفید باشد." },
+      { "en": "He lived in the water like the swan.", "fa": "مثل قو در آب زندگی کرد." },
+      { "en": "He got hungry and weak.", "fa": "گرسنه و ضعیف شد." },
+      { "en": "Be yourself.", "fa": "خودت باش." },
+      { "en": "Don't try to be someone else.", "fa": "سعی نکن کسی دیگر باشی." }
+    ]
+  },
+  {
+    "id": "wolf-and-lamb",
+    "title": "The Wolf and the Lamb",
+    "level": "A1",
+    "sentences": [
+      { "en": "A wolf wanted to eat a lamb.", "fa": "گرگی می‌خواست بره‌ای را بخورد." },
+      { "en": "He looked for an excuse.", "fa": "دنبال بهانه گشت." },
+      { "en": "He blamed the lamb unfairly.", "fa": "بره را بی‌دلیل مقصر دانست." },
+      { "en": "The wolf ate the lamb.", "fa": "گرگ بره را خورد." },
+      { "en": "The strong may hurt the weak.", "fa": "قوی‌ها ممکن است به ضعیف‌ها آسیب بزنند." }
+    ]
+  },
+  {
+    "id": "rabbit-and-turtle",
+    "title": "The Rabbit and the Turtle",
+    "level": "A1",
+    "sentences": [
+      { "en": "A rabbit mocked a slow turtle.", "fa": "یک خرگوش به لاک‌پشت کند خندید." },
+      { "en": "They raced.", "fa": "مسابقه دادند." },
+      { "en": "The rabbit slept, the turtle kept walking.", "fa": "خرگوش خوابید، لاک‌پشت ادامه داد." },
+      { "en": "The turtle won.", "fa": "لاک‌پشت برنده شد." },
+      { "en": "Persistence wins.", "fa": "پشتکار برنده می‌شود." }
+    ]
+  },
+  {
+    "id": "lion-and-cow",
+    "title": "The Lion and the Cow",
+    "level": "A1",
+    "sentences": [
+      { "en": "A lion hunted a cow.", "fa": "شیری گاوی را شکار کرد." },
+      { "en": "He asked other animals to share.", "fa": "از حیوانات دیگر خواست شریک شوند." },
+      { "en": "He took all the meat.", "fa": "همه گوشت را برداشت." },
+      { "en": "He said, 'The strong take all.'", "fa": "گفت: 'قوی همه چیز را می‌برد.'" },
+      { "en": "Be careful who you trust.", "fa": "مراقب باش به چه کسی اعتماد می‌کنی." }
+    ]
+  },
+  {
+    "id": "farmer-and-crow",
+    "title": "The Farmer and the Crow",
+    "level": "A1",
+    "sentences": [
+      { "en": "A crow stole seeds from a farmer's field.", "fa": "کلاغی دانه‌ها را از مزرعه کشاورز دزدید." },
+      { "en": "The farmer set a trap.", "fa": "کشاورز تله گذاشت." },
+      { "en": "The crow was caught.", "fa": "کلاغ گرفتار شد." },
+      { "en": "Don't do wrong and get caught.", "fa": "کار اشتباه نکن که گرفتار شوی." },
+      { "en": "Actions have consequences.", "fa": "اعمال عواقب دارند." }
+    ]
+  },
+  {
+    "id": "mice-and-cat",
+    "title": "The Mice and the Cat",
+    "level": "A2",
+    "sentences": [
+      { "en": "Mice were afraid of a cat.", "fa": "موش‌ها از یک گربه می‌ترسیدند." },
+      { "en": "They planned to put a bell on the cat.", "fa": "تصمیم گرفتند زنگوله‌ای به گردن گربه بزنند." },
+      { "en": "But nobody dared to do it.", "fa": "اما هیچ‌کس جرات نکرد این کار را انجام دهد." },
+      { "en": "Ideas are easy, actions are hard.", "fa": "ایده آسان است، عمل سخت است." },
+      { "en": "Be brave to act.", "fa": "برای عمل شجاع باش." }
+    ]
+  },
+  {
+    "id": "two-goats",
+    "title": "The Two Goats",
+    "level": "A1",
+    "sentences": [
+      { "en": "Two goats met on a narrow bridge.", "fa": "دو بز روی پلی باریک به هم رسیدند." },
+      { "en": "Neither wanted to give way.", "fa": "هیچ‌کدام راه نداد." },
+      { "en": "They fought and both fell into the river.", "fa": "جنگیدند و هر دو افتادند به رودخانه." },
+      { "en": "Yield to avoid trouble.", "fa": "برای جلوگیری از دردسر کوتاه بیا." },
+      { "en": "Pride brings trouble.", "fa": "غرور دردسر می‌آورد." }
+    ]
+  },
+  {
+    "id": "cat-and-bell",
+    "title": "The Cat and the Bell",
+    "level": "A2",
+    "sentences": [
+      { "en": "Mice wanted to put a bell on the cat.", "fa": "موش‌ها می‌خواستند زنگوله به گردن گربه بزنند." },
+      { "en": "No one volunteered.", "fa": "هیچ‌کس داوطلب نشد." },
+      { "en": "It's easy to suggest hard things.", "fa": "پیشنهاد دادن کارهای سخت آسان است." },
+      { "en": "Doing them is harder.", "fa": "انجامشان سخت‌تر است." },
+      { "en": "Think before you speak.", "fa": "قبل از حرف زدن فکر کن." }
+    ]
+  },
+  {
+    "id": "farmer-and-apple-tree",
+    "title": "The Farmer and the Apple Tree",
+    "level": "A1",
+    "sentences": [
+      { "en": "A farmer wanted to cut an old apple tree.", "fa": "کشاورز می‌خواست یک درخت سیب پیر را قطع کند." },
+      { "en": "Birds begged him to spare the tree.", "fa": "پرندگان از او خواستند درخت را ببخشد." },
+      { "en": "He agreed and got fruit and shade.", "fa": "او موافقت کرد و میوه و سایه گرفت." },
+      { "en": "Mercy brings rewards.", "fa": "بخشش پاداش می‌آورد." },
+      { "en": "Be kind to all.", "fa": "به همه مهربان باش." }
+    ]
+  },
+  {
+    "id": "foolish-monkey",
+    "title": "The Foolish Monkey",
+    "level": "A1",
+    "sentences": [
+      { "en": "A monkey saw fish struggling in the water.", "fa": "میمونی ماهی‌هایی را دید که در آب دست و پا می‌زدند." },
+      { "en": "He thought they were drowning.", "fa": "فکر کرد دارند غرق می‌شوند." },
+      { "en": "He took them out and they died.", "fa": "آن‌ها را بیرون آورد و مردند." },
+      { "en": "Don't help without understanding.", "fa": "بدون فهمیدن کمک نکن." },
+      { "en": "Good intentions need knowledge.", "fa": "نیت خوب نیاز به دانش دارد." }
+    ]
+  },
+  {
+    "id": "old-woman-and-gold",
+    "title": "The Old Woman and the Gold",
+    "level": "A2",
+    "sentences": [
+      { "en": "An old woman found a pot of gold.", "fa": "پیرزنی یک کوزه طلا پیدا کرد." },
+      { "en": "She imagined many things.", "fa": "خیال‌بافی کرد." },
+      { "en": "She tripped and lost the gold.", "fa": "افتاد و طلا را از دست داد." },
+      { "en": "Don't dream too much.", "fa": "زیاد خیال نباف." },
+      { "en": "Work for your dreams.", "fa": "برای رویاهایت تلاش کن." }
+    ]
+  },
+  {
+    "id": "wise-owl",
+    "title": "The Wise Old Owl",
+    "level": "A1",
+    "sentences": [
+      { "en": "An owl lived in an old oak.", "fa": "جغدی در یک درخت بلوط پیر زندگی می‌کرد." },
+      { "en": "He observed and listened.", "fa": "او مشاهده و گوش می‌داد." },
+      { "en": "He spoke less and learned more.", "fa": "کم صحبت می‌کرد و بیشتر یاد می‌گرفت." },
+      { "en": "Wisdom comes from listening.", "fa": "حکمت از گوش دادن می‌آید." },
+      { "en": "Speak less, listen more.", "fa": "کمتر حرف بزن، بیشتر گوش بده." }
+    ]
+  },
+  {
+    "id": "farmer-and-snake",
+    "title": "The Farmer and the Snake",
+    "level": "A2",
+    "sentences": [
+      { "en": "A farmer found a frozen snake.", "fa": "کشاورزی مار یخ‌زده‌ای پیدا کرد." },
+      { "en": "He warmed it, and it bit him.", "fa": "آن را گرم کرد و مار او را گزید." },
+      { "en": "Beware of ungrateful people.", "fa": "مراقب افراد ناسپاس باش." },
+      { "en": "Not all kindness is returned.", "fa": "همه مهربانی‌ها جبران نمی‌شود." },
+      { "en": "Be careful who you help.", "fa": "مراقب باش به چه کسی کمک می‌کنی." }
+    ]
+  },
+  {
+    "id": "rabbit-and-lion",
+    "title": "The Rabbit and the Lion",
+    "level": "A2",
+    "sentences": [
+      { "en": "A lion ate many animals.", "fa": "شیری حیوانات زیادی را می‌خورد." },
+      { "en": "A rabbit tricked him into jumping into a well.", "fa": "خرگوشی او را فریب داد تا داخل چاه بپرد." },
+      { "en": "The lion drowned.", "fa": "شیر غرق شد." },
+      { "en": "Smart thinking saves lives.", "fa": "تفکر هوشمندانه جان می‌رهاند." },
+      { "en": "Use your brain in trouble.", "fa": "در دردسر از مغزت استفاده کن." }
+    ]
+  },
+  {
+    "id": "merchant-and-donkey",
+    "title": "The Merchant and the Donkey",
+    "level": "A2",
+    "sentences": [
+      { "en": "A merchant's donkey carried salt.", "fa": "الاغ تاجری بار نمک حمل می‌کرد." },
+      { "en": "The donkey fell in water and salt melted.", "fa": "الاغ در آب افتاد و نمک حل شد." },
+      { "en": "He repeated it to lighten loads.", "fa": "این کار را تکرار کرد تا بارش سبک شود." },
+      { "en": "The merchant loaded sponges.", "fa": "تاجر اسفنج بارش کرد." },
+      { "en": "Don’t try to be too clever.", "fa": "خیلی زرنگ نباش." }
+    ]
+  },
+  {
+    "id": "village-and-city",
+    "title": "The Village Mouse and the City Mouse",
+    "level": "A1",
+    "sentences": [
+      { "en": "A village mouse visited his city cousin.", "fa": "موش روستایی به دیدار پسرعموی شهری رفت." },
+      { "en": "He liked the simple life.", "fa": "زندگی ساده را دوست داشت." },
+      { "en": "City life was rich but risky.", "fa": "زندگی شهر پر زرق و برق ولی خطرناک بود." },
+      { "en": "Safety is more important than luxury.", "fa": "امنیت از تجمل مهم‌تر است." },
+      { "en": "Home is best.", "fa": "خانه بهترین جاست." }
+    ]
+  },
+  {
+    "id": "thirsty-dog",
+    "title": "The Thirsty Dog",
+    "level": "A1",
+    "sentences": [
+      { "en": "A dog was thirsty.", "fa": "سگی تشنه بود." },
+      { "en": "He found a pot with water.", "fa": "کوزه‌ای با آب پیدا کرد." },
+      { "en": "He could not reach it.", "fa": "نتوانست به آن برسد." },
+      { "en": "He tried and finally drank.", "fa": "تلاش کرد و بالاخره نوشید." },
+      { "en": "Never give up.", "fa": "هرگز تسلیم نشو." }
+    ]
+  },
+  {
+    "id": "old-man-and-death",
+    "title": "The Old Man and Death",
+    "level": "A2",
+    "sentences": [
+      { "en": "An old man was tired of life.", "fa": "پیرمردی از زندگی خسته شده بود." },
+      { "en": "He called for Death.", "fa": "مرگ را صدا زد." },
+      { "en": "When Death came, he was afraid.", "fa": "وقتی مرگ آمد، ترسید." },
+      { "en": "He asked Death to help him instead.", "fa": "از مرگ خواست به او کمک کند." },
+      { "en": "We fear what we don’t know.", "fa": "از چیزی که نمی‌دانیم می‌ترسیم." }
+    ]
+  },
+  {
+    "id": "farmer-and-his-sons",
+    "title": "The Farmer and His Sons",
+    "level": "A2",
+    "sentences": [
+      { "en": "A farmer told his sons there was treasure in the field.", "fa": "کشاورز به پسرانش گفت گنجی در مزرعه است." },
+      { "en": "They dug the field but found nothing.", "fa": "زمین را کندند اما چیزی پیدا نکردند." },
+      { "en": "The land produced a good crop.", "fa": "زمین محصول خوبی داد." },
+      { "en": "Hard work brings rewards.", "fa": "تلاش پاداش می‌آورد." },
+      { "en": "Work is the real treasure.", "fa": "کار گنج واقعی است." }
+    ]
+  },
+  {
+    "id": "fox-and-stork",
+    "title": "The Fox and the Stork",
+    "level": "A2",
+    "sentences": [
+      { "en": "A fox invited a stork to dinner.", "fa": "روباه لک‌لک را به شام دعوت کرد." },
+      { "en": "He served soup in a flat dish.", "fa": "سوپ را در ظرفی صاف داد." },
+      { "en": "The stork could not eat.", "fa": "لک‌لک نتوانست بخورد." },
+      { "en": "The stork invited the fox and served food in a tall jar.", "fa": "لک‌لک روباه را دعوت کرد و غذا را در کوزه بلند داد." },
+      { "en": "Treat others as you want to be treated.", "fa": "با دیگران همانطور رفتار کن که می‌خواهی با تو رفتار شود." }
+    ]
+  },
+  {
+    "id": "sun-and-clouds",
+    "title": "The Sun and the Clouds",
+    "level": "A1",
+    "sentences": [
+      { "en": "The sun shone brightly.", "fa": "خورشید درخشان می‌تابید." },
+      { "en": "Clouds covered the sky.", "fa": "ابرها آسمان را پوشاندند." },
+      { "en": "The sun waited patiently.", "fa": "خورشید صبورانه منتظر ماند." },
+      { "en": "The clouds passed and the sun shone again.", "fa": "ابرها گذشتند و خورشید دوباره درخشید." },
+      { "en": "Patience brings light.", "fa": "صبر نور می‌آورد." }
+    ]
+  }
+]
