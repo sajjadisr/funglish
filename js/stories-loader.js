@@ -1,32 +1,40 @@
-// story-loader.js
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Helper: get query param by name
   function getQueryParam(name) {
     const url = new URL(window.location.href);
     return url.searchParams.get(name);
   }
 
-  // Fetch the story ID from the URL
   const storyId = getQueryParam('id');
-  const container = document.getElementById('story-container') || document.body;
+  const container = document.getElementById('story-container');
 
-  // Utility: show error message
   function showError(msg) {
     container.innerHTML = `<div class="content-item"><strong style="color:red;">${msg}</strong></div>`;
   }
 
-  // Loader
-  fetch('stories.json')
-    .then(res => res.json())
+  fetch('../stories.json')
+    .then(res => {
+      if (!res.ok) throw new Error('فایل داستان‌ها یافت نشد.');
+      return res.json();
+    })
     .then(stories => {
       if (!storyId) {
-        showError('آیدی داستان مشخص نشده است.');
+        // Show list of stories as links
+        let html = '';
+        stories.forEach(story => {
+          html += `
+            <div class="content-item">
+              <h2>
+                <a href="stories.html?id=${encodeURIComponent(story.id)}">${story.title}</a>
+                <span class="level">${story.level || ''}</span>
+              </h2>
+            </div>
+          `;
+        });
+        container.innerHTML = html;
         return;
       }
 
       const story = stories.find(s => s.id === storyId);
-
       if (!story) {
         showError('داستان پیدا نشد.');
         return;
@@ -46,11 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
       });
 
-      html += `</div></div>`;
-
+      html += `</div></div>
+      <div style="margin-top:2rem;">
+        <a href="stories.html" style="color:#1e3c72;text-decoration:underline;">&larr; بازگشت به فهرست داستان‌ها</a>
+      </div>`;
       container.innerHTML = html;
     })
     .catch(() => {
-      showError('خطا در بارگذاری داستان.');
+      showError('خطا در بارگذاری داستان‌ها.');
     });
 });

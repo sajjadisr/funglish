@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فانگلیش - یادگیری انگلیسی با پشتیبانی فارسی</title>
-  <meta name="description" content="یادگیری انگلیسی با پشتیبانی فارسی و ابزارهای تعاملی، محتوای واقعی و ترجمه سریع.">
+  <meta name="description" content="یادگیری انگلیسی با پشتیبانی فارسی و ابزارهای تعاملی، داستان‌های کوتاه، متن ساده، پادکست و ترجمه سریع.">
   <meta property="og:title" content="فانگلیش - یادگیری انگلیسی با پشتیبانی فارسی">
-  <meta property="og:description" content="یادگیری انگلیسی به شیوه‌ای طبیعی و جذاب با محتوای واقعی و پشتیبانی فارسی.">
+  <meta property="og:description" content="انگلیسی را با داستان کوتاه، متن ساده و ابزارهای هوشمند به‌راحتی یاد بگیرید.">
   <meta property="og:image" content="https://funglish.ir/public/images/og-image.png">
   <meta property="og:type" content="website">
   <link rel="icon" href="./public/images/favicon.ico">
@@ -16,30 +16,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body lang="fa">
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">رفتن به محتوا</a>
   <header>
     <div class="container header-content">
-      <div class="logo" tabindex="0" aria-label="Funglish Logo">
+      <a href="index.html" class="logo" tabindex="0" aria-label="صفحه اصلی فانگلیش">
         <i class="fas fa-language"></i>
         فانگلیش
-      </div>
+      </a>
       <nav aria-label="منوی اصلی">
         <ul>
-          <li><a href="#" data-lang="login"><i class="fas fa-sign-in-alt"></i> ورود</a></li>
-          <li><a href="#" data-lang="about"><i class="fas fa-info-circle"></i> درباره</a></li>
+          <li><a href="./public/stories.html"><i class="fas fa-book-open"></i> داستان‌ها</a></li>
+          <li><a href="#simple-text"><i class="fas fa-align-left"></i> متن ساده</a></li>
+          <li><a href="#podcasts"><i class="fas fa-headphones"></i> پادکست</a></li>
           <li class="dropdown">
-            <a href="#" data-lang="content" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i> محتوا</a>
+            <a href="#" aria-haspopup="true" aria-expanded="false"><i class="fas fa-tools"></i> ابزارها</a>
             <div class="dropdown-content" role="menu">
-              <a href="./public/stories.html" data-lang="text"><i class="fas fa-font"></i> متن</a>
-              <a href="#" data-lang="video"><i class="fas fa-video"></i> ویدیو</a>
+              <a href="#subtitle-tool"><i class="fas fa-closed-captioning"></i> زیرنویس هوشمند ویدیو</a>
+              <a href="#vocab-tool"><i class="fas fa-language"></i> یادگیری لغت</a>
             </div>
           </li>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> درباره</a></li>
         </ul>
       </nav>
       <div>
-        <button class="toggle-btn" id="lang-toggle" data-lang="lang-en" aria-label="تغییر زبان به انگلیسی">
+        <button class="toggle-btn" id="lang-toggle" aria-label="تغییر زبان به انگلیسی">
           <i class="fas fa-globe"></i> English
         </button>
-        <button class="toggle-btn" id="theme-toggle" data-lang="theme-dark" aria-label="تغییر حالت تیره">
+        <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت تیره">
           <i class="fas fa-moon"></i> حالت تیره
         </button>
       </div>
@@ -48,100 +52,82 @@
 
   <section class="hero" role="banner">
     <div class="container hero-content">
-      <h1 data-lang="hero-title">یادگیری انگلیسی با پشتیبانی فارسی</h1>
-      <p data-lang="hero-text">
-        انگلیسی را به شیوه‌ای طبیعی و جذاب یاد بگیرید. با محتوای واقعی مانند متن‌ها، ویدیوها و پادکست‌ها تعامل کنید و با ابزارهای دوزبانه ما پیشرفت کنید.
+      <h1>یادگیری انگلیسی با پشتیبانی فارسی</h1>
+      <p>
+        فانگلیش با داستان کوتاه، متن ساده، و ابزار هوشمند، یادگیری انگلیسی را برای فارسی‌زبانان آسان و جذاب می‌کند. هر محتوایی با ترجمه و توضیح ارائه می‌شود.
       </p>
       <div class="cta-buttons">
-        <button class="btn btn-primary" data-lang="get-started" aria-label="شروع کنید">
-          <i class="fas fa-rocket"></i> شروع کنید
-        </button>
-        <button class="btn btn-secondary" data-lang="learn-more" aria-label="بیشتر بدانید">
-          <i class="fas fa-book-open"></i> بیشتر بدانید
-        </button>
+        <a class="btn btn-primary" href="./public/stories.html">
+          <i class="fas fa-book-open"></i> داستان کوتاه
+        </a>
+        <a class="btn btn-secondary" href="#simple-text">
+          <i class="fas fa-align-left"></i> متن ساده
+        </a>
+        <a class="btn btn-secondary" href="#subtitle-tool">
+          <i class="fas fa-closed-captioning"></i> ابزار زیرنویس
+        </a>
       </div>
     </div>
   </section>
 
   <main class="container" id="main-content">
-    <section class="content-idea animate__animated animate__fadeIn">
-      <h1 data-lang="idea-title">ایده اصلی: یادگیری با ایمرشن</h1>
-      <div class="sentence-container" tabindex="0" aria-describedby="sentence-translate">
-        <span class="english-sentence">I love to learn English by reading.</span>
-        <span class="farsi-translation" id="sentence-translate">من عاشق یادگیری انگلیسی با خواندن هستم.</span>
-        <div class="hover-label" data-lang="hover">هاور کنید</div>
-      </div>
-    </section>
-    
-    <section class="site-description animate__animated animate__fadeIn">
-      <h2 data-lang="description-title">درباره ایمرشن موازی</h2>
-      <p data-lang="description-text">
-        انگلیسی را به شیوه‌ای طبیعی و جذاب یاد بگیرید. با محتوای واقعی مانند متن‌ها، ویدیوها و پادکست‌ها تعامل کنید و با ابزارهای دوزبانه ما، از جمله ترجمه‌های فوری و نکات گرامری، پیشرفت کنید. پشتیبانی فارسی همیشه در دسترس شماست!
+    <!-- متن ساده Section -->
+    <section id="simple-text" class="site-description animate__animated animate__fadeIn">
+      <h2>متن‌های ساده انگلیسی با ترجمه</h2>
+      <p>
+        گلچینی از متن‌های ساده و کاربردی برای شروع یادگیری انگلیسی. هر متن با ترجمه فارسی و واژگان کلیدی ارائه می‌شود.
       </p>
     </section>
-    
-    <section class="subtitle-tool animate__animated animate__fadeIn">
-      <h2 data-lang="subtitle-title">ابزار زیرنویس ویدیویی ما</h2>
-      <p data-lang="subtitle-text">به زودی با استفاده از فناوری GPT، ابزار زیرنویس هوشمند ما به شما کمک می‌کند تا ویدیوهای انگلیسی را با زیرنویس‌های تعاملی و ترجمه‌های فارسی تماشا کنید.</p>
-      <div class="coming-soon" data-lang="coming-soon">به زودی</div>
-    </section>
-    
-    <section class="features" aria-label="ویژگی‌ها">
-      <div class="feature-card animate__animated animate__fadeInUp" tabindex="0">
-        <div class="feature-icon">
-          <i class="fas fa-book"></i>
-        </div>
-        <h3 data-lang="feature1-title">متن‌های آموزشی</h3>
-        <p data-lang="feature1-text">متن‌های سطح‌بندی شده با ترجمه فارسی و لغات کلیدی</p>
-      </div>
-      <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s" tabindex="0">
-        <div class="feature-icon">
-          <i class="fas fa-headphones"></i>
-        </div>
-        <h3 data-lang="feature2-title">پادکست‌های آموزشی</h3>
-        <p data-lang="feature2-text">پادکست‌های انگلیسی با رونوشت و ترجمه فارسی</p>
-      </div>
-      <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s" tabindex="0">
-        <div class="feature-icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h3 data-lang="feature3-title">پیگیری پیشرفت</h3>
-        <p data-lang="feature3-text">سیستم پیگیری پیشرفت و بهبود مداوم مهارت‌ها</p>
-      </div>
+
+    <!-- پادکست Section -->
+    <section id="podcasts" class="site-description animate__animated animate__fadeIn">
+      <h2>پادکست‌های آموزشی انگلیسی</h2>
+      <p>
+        به زودی: پادکست‌های کوتاه و قابل فهم برای تقویت شنیداری همراه با ترجمه فارسی و واژگان.
+      </p>
     </section>
 
-    <h2 class="section-title" data-lang="content-title">محتواهای آموزشی</h2>
+    <!-- ابزار زیرنویس Section -->
+    <section id="subtitle-tool" class="subtitle-tool animate__animated animate__fadeIn">
+      <h2>ابزار زیرنویس هوشمند ویدیویی</h2>
+      <p>
+        به زودی: با استفاده از فناوری GPT، ویدیوهای انگلیسی را با زیرنویس تعاملی و ترجمه فارسی تماشا کنید.
+      </p>
+      <div class="coming-soon">به زودی</div>
+    </section>
+
+    <h2 class="section-title">محتواهای آموزشی منتخب</h2>
     <section id="content-container" class="loaded-content" aria-live="polite"></section>
   </main>
 
   <footer>
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section">
-          <h3 data-lang="footer-about">درباره ما</h3>
+        <div class="footer-section" id="about">
+          <h3>درباره فانگلیش</h3>
           <ul>
-            <li><a href="#" data-lang="footer-mission">ماموریت ما</a></li>
-            <li><a href="#" data-lang="footer-team">تیم ما</a></li>
-            <li><a href="#" data-lang="footer-contact">تماس با ما</a></li>
+            <li><a href="#mission">ماموریت ما</a></li>
+            <li><a href="#team">تیم ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3 data-lang="footer-resources">منابع</h3>
+          <h3>منابع</h3>
           <ul>
-            <li><a href="#" data-lang="footer-blog">وبلاگ</a></li>
-            <li><a href="#" data-lang="footer-tutorials">آموزش‌ها</a></li>
-            <li><a href="#" data-lang="footer-faq">سوالات متداول</a></li>
+            <li><a href="#blog">وبلاگ</a></li>
+            <li><a href="#tutorials">آموزش‌ها</a></li>
+            <li><a href="#faq">سوالات متداول</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3 data-lang="footer-legal">قوانین</h3>
+          <h3>قوانین</h3>
           <ul>
-            <li><a href="#" data-lang="footer-privacy">حریم خصوصی</a></li>
-            <li><a href="#" data-lang="footer-terms">شرایط استفاده</a></li>
+            <li><a href="#privacy">حریم خصوصی</a></li>
+            <li><a href="#terms">شرایط استفاده</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3 data-lang="footer-social">شبکه‌های اجتماعی</h3>
+          <h3>شبکه‌های اجتماعی</h3>
           <ul>
             <li><a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i> تلگرام</a></li>
             <li><a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i> اینستاگرام</a></li>
@@ -150,165 +136,27 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p data-lang="footer-copyright">© ۲۰۲۳ ایمرشن موازی. تمام حقوق محفوظ است.</p>
+        <p>© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Accessibility: Skip link focus
-    document.querySelector('.skip-link').addEventListener('focus', function() {
-      this.style.top = '0';
-    });
-
-    // Enhanced translations
-    const translations = {
-      fa: {
-        'login': 'ورود',
-        'about': 'درباره',
-        'content': 'محتوا',
-        'text': 'متن',
-        'video': 'ویدیو',
-        'lang-en': 'English',
-        'lang-fa': 'فارسی',
-        'theme-dark': 'حالت تیره',
-        'theme-light': 'حالت روشن',
-        'idea-title': 'ایده اصلی: یادگیری با ایمرشن',
-        'hover': 'هاور کنید',
-        'description-title': 'درباره ایمرشن موازی',
-        'description-text': 'انگلیسی را به شیوه‌ای طبیعی و جذاب یاد بگیرید. با محتوای واقعی مانند متن‌ها، ویدیوها و پادکست‌ها تعامل کنید و با ابزارهای دوزبانه ما، از جمله ترجمه‌های فوری و نکات گرامری، پیشرفت کنید. پشتیبانی فارسی همیشه در دسترس شماست!',
-        'subtitle-title': 'ابزار زیرنویس ویدیویی ما',
-        'subtitle-text': 'به زودی با استفاده از فناوری GPT، ابزار زیرنویس هوشمند ما به شما کمک می‌کند تا ویدیوهای انگلیسی را با زیرنویس‌های تعاملی و ترجمه‌های فارسی تماشا کنید.',
-        'coming-soon': 'به زودی',
-        'hero-title': 'یادگیری انگلیسی با پشتیبانی فارسی',
-        'hero-text': 'انگلیسی را به شیوه‌ای طبیعی و جذاب یاد بگیرید. با محتوای واقعی مانند متن‌ها، ویدیوها و پادکست‌ها تعامل کنید و با ابزارهای دوزبانه ما پیشرفت کنید.',
-        'get-started': 'شروع کنید',
-        'learn-more': 'بیشتر بدانید',
-        'feature1-title': 'متن‌های آموزشی',
-        'feature1-text': 'متن‌های سطح‌بندی شده با ترجمه فارسی و لغات کلیدی',
-        'feature2-title': 'پادکست‌های آموزشی',
-        'feature2-text': 'پادکست‌های انگلیسی با رونوشت و ترجمه فارسی',
-        'feature3-title': 'پیگیری پیشرفت',
-        'feature3-text': 'سیستم پیگیری پیشرفت و بهبود مداوم مهارت‌ها',
-        'content-title': 'محتواهای آموزشی',
-        'footer-about': 'درباره ما',
-        'footer-mission': 'ماموریت ما',
-        'footer-team': 'تیم ما',
-        'footer-contact': 'تماس با ما',
-        'footer-resources': 'منابع',
-        'footer-blog': 'وبلاگ',
-        'footer-tutorials': 'آموزش‌ها',
-        'footer-faq': 'سوالات متداول',
-        'footer-legal': 'قوانین',
-        'footer-privacy': 'حریم خصوصی',
-        'footer-terms': 'شرایط استفاده',
-        'footer-social': 'شبکه‌های اجتماعی',
-        'footer-copyright': '© ۲۰۲۳ ایمرشن موازی. تمام حقوق محفوظ است.'
-      },
-      en: {
-        'login': 'Log In',
-        'about': 'About',
-        'content': 'Content',
-        'text': 'Text',
-        'video': 'Video',
-        'lang-en': 'English',
-        'lang-fa': 'Farsi',
-        'theme-dark': 'Dark Mode',
-        'theme-light': 'Light Mode',
-        'idea-title': 'Core Idea: Immersive Learning',
-        'hover': 'Hover',
-        'description-title': 'About Parallel Immersion',
-        'description-text': 'Learn English naturally and engagingly. Interact with real content like texts, videos, and podcasts, and progress with our bilingual tools, including instant translations and grammar tips. Persian support is always available!',
-        'subtitle-title': 'Our Video Subtitle Tool',
-        'subtitle-text': 'Coming soon, powered by GPT technology, our smart subtitle tool will help you watch English videos with interactive subtitles and Persian translations.',
-        'coming-soon': 'Coming Soon',
-        'hero-title': 'Learn English with Persian Support',
-        'hero-text': 'Learn English naturally and effectively. Engage with authentic content like texts, videos, and podcasts, and improve with our bilingual tools.',
-        'get-started': 'Get Started',
-        'learn-more': 'Learn More',
-        'feature1-title': 'Educational Texts',
-        'feature1-text': 'Leveled texts with Persian translations and key vocabulary',
-        'feature2-title': 'Learning Podcasts',
-        'feature2-text': 'English podcasts with transcripts and Persian translations',
-        'feature3-title': 'Progress Tracking',
-        'feature3-text': 'Progress tracking system for continuous skill improvement',
-        'content-title': 'Learning Materials',
-        'footer-about': 'About Us',
-        'footer-mission': 'Our Mission',
-        'footer-team': 'Our Team',
-        'footer-contact': 'Contact Us',
-        'footer-resources': 'Resources',
-        'footer-blog': 'Blog',
-        'footer-tutorials': 'Tutorials',
-        'footer-faq': 'FAQ',
-        'footer-legal': 'Legal',
-        'footer-privacy': 'Privacy Policy',
-        'footer-terms': 'Terms of Service',
-        'footer-social': 'Social Media',
-        'footer-copyright': '© 2023 Parallel Immersion. All rights reserved.'
-      }
-    };
-
-    // Language Toggle
-    const langToggle = document.getElementById('lang-toggle');
-    langToggle.addEventListener('click', () => {
-      const currentLang = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
-      document.body.setAttribute('lang', currentLang);
-      langToggle.innerHTML = `<i class="fas fa-globe"></i> ${translations[currentLang]['lang-' + (currentLang === 'fa' ? 'en' : 'fa')]}`;
-      document.querySelectorAll('[data-lang]').forEach(elem => {
-        const key = elem.getAttribute('data-lang');
-        if (translations[currentLang][key]) {
-          if (elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA') {
-            elem.placeholder = translations[currentLang][key];
-          } else {
-            elem.innerHTML = translations[currentLang][key];
-          }
-        }
-      });
-      // Update direction and font
-      if (currentLang === 'en') {
-        document.documentElement.setAttribute('dir', 'ltr');
-      } else {
-        document.documentElement.setAttribute('dir', 'rtl');
-      }
-    });
-
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       const isDark = document.body.classList.contains('dark-mode');
-      const currentLang = document.body.getAttribute('lang');
-      themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i> ${translations[currentLang][isDark ? 'theme-light' : 'theme-dark']}`;
+      themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i> ${isDark ? 'حالت نور' : 'حالت تیره'}`;
     });
 
-    // Initialize translations and accessibility focus/hover for translation
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentLang = document.body.getAttribute('lang');
-      document.querySelectorAll('[data-lang]').forEach(elem => {
-        const key = elem.getAttribute('data-lang');
-        if (translations[currentLang][key]) {
-          elem.innerHTML = translations[currentLang][key];
-        }
-      });
-
-      // Enhanced accessibility for sentence translation
-      const sentenceContainer = document.querySelector('.sentence-container');
-      if (sentenceContainer) {
-        sentenceContainer.addEventListener('focus', () => {
-          sentenceContainer.querySelector('.farsi-translation').style.display = 'block';
-        });
-        sentenceContainer.addEventListener('blur', () => {
-          sentenceContainer.querySelector('.farsi-translation').style.display = 'none';
-        });
-        sentenceContainer.addEventListener('keydown', e => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            const trans = sentenceContainer.querySelector('.farsi-translation');
-            trans.style.display = trans.style.display === 'block' ? 'none' : 'block';
-          }
-        });
-      }
+    // Language Toggle (optional, you can expand translations)
+    const langToggle = document.getElementById('lang-toggle');
+    langToggle.addEventListener('click', () => {
+      const currentLang = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
+      document.body.setAttribute('lang', currentLang);
+      langToggle.innerHTML = `<i class="fas fa-globe"></i> ${currentLang === 'fa' ? 'English' : 'فارسی'}`;
+      document.documentElement.setAttribute('dir', currentLang === 'fa' ? 'rtl' : 'ltr');
     });
   </script>
   <script src="content-loader.js"></script>

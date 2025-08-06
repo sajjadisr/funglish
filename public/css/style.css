@@ -537,3 +537,9 @@ body[lang="en"] .feature-card,
 body[lang="en"] .content-item {
   text-align: left;
 }
+
+.english-text, .english-sentence {
+  direction: ltr;
+  text-align: left;
+  display: block;
+}

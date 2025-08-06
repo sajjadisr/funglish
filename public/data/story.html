@@ -4,147 +4,49 @@
   <meta charset="UTF-8">
   <title>خواندن داستان - فانگلیش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css"> 
   <style>
-    /* Ensure story content fits within the main container layout */
-    .story-page-container {
-      max-width: 700px; /* Match the width from your initial example */
-      margin: 2rem auto;
-      padding: 0 15px; /* Adjust padding if needed */
-    }
-    .story-content-item {
-       /* Reuse styles from .content-item in your main CSS */
-       background: #fff;
-       border-radius: 12px;
-       padding: 2rem 1.5rem;
-       margin-bottom: 2rem;
-       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-    body.dark-mode .story-content-item {
-      background: #333;
-      color: #f8f9fa;
-    }
-    .story-title {
-       text-align: center;
-       font-size: 2rem;
-       margin-bottom: 1.5rem;
-       color: #1e3c72;
-       font-weight: 700;
-    }
-    body.dark-mode .story-title {
-      color: #ff9800;
-    }
-
-    /* --- Hover Translation Styles (Reusing existing CSS logic) --- */
-    /* The core styles for .sentence-container, .english-sentence, .farsi-translation are in your main CSS */
-    /* We just need to apply the structure and potentially minor adjustments */
-
-    .story-paragraph {
-        font-size: 1.1rem;
-        line-height: 2.1;
-        margin-bottom: 1.5rem; /* Space between paragraphs */
-    }
-    /* Ensure the translation box appears correctly below the hovered sentence */
-    .sentence-container {
-        display: inline-block; /* Allows the container to wrap the sentence tightly */
-        position: relative;
-        margin: 0; /* Reset margin from main CSS if it causes issues */
-        outline: none;
-    }
-    /* Adjust translation box positioning if needed */
-    .farsi-translation {
-        /* Positioning is handled in main CSS */
-        font-size: 1rem; /* Match size from main CSS */
-        padding: 0.5rem 1rem; /* Match padding from main CSS */
-        border-radius: 8px; /* Match border-radius from main CSS */
-         /* Ensure it appears above other content */
-        z-index: 10;
-    }
-    /* --- Navbar Styles (Reusing existing CSS logic) --- */
-    /* The core navbar styles are in your main CSS. We just add the HTML structure. */
-    /* Ensure the navbar sticks to the top */
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    /* Style adjustments for the story page navbar items if needed */
-    .story-nav-link {
-        /* Can inherit most styles from nav a */
-        display: flex;
-        align-items: center;
-        gap: 0.5rem; /* Space for icon if used */
-    }
-     /* --- Toggle Button Styles (Reusing existing CSS logic) --- */
-    /* The core toggle button styles are in your main CSS. */
-    .toggle-btn {
-        /* Inherit styles */
-        display: flex;
-        align-items: center;
-        gap: 7px; /* Match gap from main CSS */
-    }
-
-    /* --- Responsive Adjustments --- */
+    .story-page-container { max-width: 700px; margin: 2rem auto; padding: 0 15px; }
+    .story-content-item { background: #fff; border-radius: 12px; padding: 2rem 1.5rem; margin-bottom: 2rem; box-shadow: 0 3px 10px rgba(0,0,0,0.08);}
+    body.dark-mode .story-content-item { background: #333; color: #f8f9fa; }
+    .story-title { text-align: center; font-size: 2rem; margin-bottom: 1.5rem; color: #1e3c72; font-weight: 700;}
+    body.dark-mode .story-title { color: #ff9800; }
+    .story-paragraph { font-size: 1.1rem; line-height: 2.1; margin-bottom: 1.5rem; }
+    .sentence-container { display: inline-block; position: relative; margin: 0; outline: none; }
+    .farsi-translation { font-size: 1rem; padding: 0.5rem 1rem; border-radius: 8px; z-index: 10;}
     @media (max-width: 600px) {
-      .story-page-container {
-        padding: 0 10px;
-      }
-      .story-content-item {
-        padding: 1.5rem 1rem;
-      }
-      .story-title {
-        font-size: 1.6rem;
-      }
-      .story-paragraph {
-        font-size: 1rem;
-      }
+      .story-page-container { padding: 0 10px; }
+      .story-content-item { padding: 1.5rem 1rem; }
+      .story-title { font-size: 1.6rem; }
+      .story-paragraph { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Skip Link for Accessibility (Optional but good practice) -->
   <a href="#main-content" class="skip-link">رفتن به محتوا</a>
-
-  <!-- Navbar -->
   <header>
     <div class="container header-content">
-      <a href="index.html" class="logo" aria-label="صفحه اصلی فانگلیش">
-        <i class="fas fa-language"></i> <!-- Assuming Font Awesome -->
+      <a href="../index.html" class="logo" aria-label="صفحه اصلی فانگلیش">
+        <i class="fas fa-language"></i>
         فانگلیش
       </a>
       <nav>
         <ul>
-          <li><a href="index.html" class="story-nav-link"><i class="fas fa-home"></i> خانه</a></li>
-          <!-- Add other navigation links as needed, matching your homepage structure -->
-          <!-- Example:
-          <li><a href="stories.html" class="story-nav-link">داستان‌ها</a></li>
-          <li class="dropdown">
-            <a href="#" class="story-nav-link">ابزارها <i class="fas fa-caret-down"></i></a>
-            <div class="dropdown-content">
-              <a href="subtitle-tool.html">ابزار زیرنویس</a>
-            </div>
-          </li>
-          -->
+          <li><a href="../index.html" class="story-nav-link"><i class="fas fa-home"></i> خانه</a></li>
         </ul>
       </nav>
       <button id="theme-toggle" class="toggle-btn" aria-label="تغییر حالت نور/تاریک">
-        <i class="fas fa-moon"></i> <!-- Icon will change via JS -->
+        <i class="fas fa-moon"></i>
         <span id="theme-text">حالت تاریک</span>
       </button>
     </div>
   </header>
-
-  <!-- Main Content Area -->
   <div class="container story-page-container">
     <main id="main-content">
       <div class="story-content-item">
-        <h1 class="story-title">داستان: سگ و سایه‌اش</h1> <!-- Story Title -->
-
+        <h1 class="story-title">داستان: سگ و سایه‌اش</h1>
         <div class="story-paragraph english-text">
-            <!-- Wrap sentences for hover translation -->
             <span class="sentence-container">
                 <span class="english-sentence">A Dog was carrying a piece of meat in his mouth.</span>
                 <span class="farsi-translation">سگی تکه‌ای گوشت را در دهانش حمل می‌کرد.</span>
@@ -171,55 +73,39 @@
             </span>
         </div>
         <div class="story-paragraph farsi-translation">
-            <!-- Full Farsi translation block -->
             <strong>سگ و سایه‌اش</strong><br><br>
             سگی تکه‌ای گوشت را در دهانش حمل می‌کرد. وقتی که در حال عبور از کنار جویبار بود، سایه‌اش را که در آب زیرش حرکت می‌کرد دید. او فکر کرد سگ دیگری با تکه گوشتی بزرگ‌تر است. دهانش را باز کرد تا بارک کند و بگوید: "آن گوشت مال منه!" اما به محض اینکه دهانش را باز کرد، تکه گوشت در آب افتاد. و بدین ترتیب سگ حرص‌خوار هم گوشت و هم سایه‌اش را از دست داد.
         </div>
       </div>
     </main>
   </div>
-
-  <!-- Font Awesome for icons (Optional but used in example) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
-
-  <!-- JavaScript for Dark/Light Mode Toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         const toggleButton = document.getElementById('theme-toggle');
-        const themeIcon = toggleButton.querySelector('i'); // Assuming the icon is the first child
+        const themeIcon = toggleButton.querySelector('i');
         const themeText = document.getElementById('theme-text');
-
-        // Check for saved theme preference or respect system preference
         const savedTheme = localStorage.getItem('theme');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = savedTheme ? savedTheme : (prefersDarkScheme ? 'dark' : 'light');
-
-        // Apply the initial theme
         document.body.classList.toggle('dark-mode', initialTheme === 'dark');
         updateToggleUI(initialTheme);
-
-        // Toggle theme function
         function toggleTheme() {
             const isDarkMode = document.body.classList.contains('dark-mode');
             const newTheme = isDarkMode ? 'light' : 'dark';
-
             document.body.classList.toggle('dark-mode', newTheme === 'dark');
             localStorage.setItem('theme', newTheme);
             updateToggleUI(newTheme);
         }
-
-        // Update button text and icon
         function updateToggleUI(theme) {
             if (theme === 'dark') {
-                themeIcon.className = 'fas fa-sun'; // Change icon
-                themeText.textContent = 'حالت نور'; // Change text
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'حالت نور';
             } else {
                 themeIcon.className = 'fas fa-moon';
                 themeText.textContent = 'حالت تاریک';
             }
         }
-
-        // Add event listener to the toggle button
         toggleButton.addEventListener('click', toggleTheme);
     });
   </script>
