@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const container = document.getElementById('story-container');
 
   function showError(msg) {
-    container.innerHTML = `<div class="content-item"><strong style="color:red;">${msg}</strong></div>`;
+    container.innerHTML = `<div class="content-item error"><strong>${msg}</strong></div>`;
   }
 
   fetch('../stories.json')
@@ -18,18 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(stories => {
       if (!storyId) {
-        // Show list of stories as links
-        let html = '';
+        // Show list of stories as cards
+        let html = '<div class="story-list">';
         stories.forEach(story => {
           html += `
-            <div class="content-item">
+            <div class="story-card">
               <h2>
                 <a href="stories.html?id=${encodeURIComponent(story.id)}">${story.title}</a>
                 <span class="level">${story.level || ''}</span>
               </h2>
+              <p class="story-preview">${story.sentences[0].en}...</p>
             </div>
           `;
         });
+        html += '</div>';
         container.innerHTML = html;
         return;
       }
@@ -40,25 +42,45 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // Render story
-      let html = `<div class="content-item">
-        <h1 class="story-title">${story.title}</h1>
-        <div class="story-paragraph english-text">`;
+      // Render story with enhanced layout
+      let html = `
+        <div class="story-content">
+          <h1 class="story-title">${story.title}</h1>
+          <div class="story-meta">سطح: <span class="level">${story.level}</span></div>
+          <div class="story-paragraph">
+      `;
 
-      story.sentences.forEach(sentence => {
+      story.sentences.forEach((sentence, index) => {
         html += `
-          <span class="sentence-container" tabindex="0">
-            <span class="english-sentence">${sentence.en}</span>
-            <span class="farsi-translation">${sentence.fa}</span>
-          </span>
+          <div class="sentence-container" tabindex="0" data-index="${index}">
+            <p class="english-sentence">${sentence.en}</p>
+            <p class="farsi-translation">${sentence.fa}</p>
+          </div>
         `;
       });
 
-      html += `</div></div>
-      <div style="margin-top:2rem;">
-        <a href="stories.html" style="color:#1e3c72;text-decoration:underline;">&larr; بازگشت به فهرست داستان‌ها</a>
-      </div>`;
+      html += `
+          </div>
+        </div>
+        <div class="back-link">
+          <a href="stories.html">&larr; بازگشت به فهرست داستان‌ها</a>
+        </div>
+      `;
       container.innerHTML = html;
+
+      // Add interactivity for sentence containers
+      document.querySelectorAll('.sentence-container').forEach(container => {
+        const translation = container.querySelector('.farsi-translation');
+        translation.style.display = 'none'; // Hide translations by default
+        container.addEventListener('click', function() {
+          translation.style.display = translation.style.display === 'none' ? 'block' : 'none';
+        });
+        container.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            translation.style.display = translation.style.display === 'none' ? 'block' : 'none';
+          }
+        });
+      });
     })
     .catch(() => {
       showError('خطا در بارگذاری داستان‌ها.');
