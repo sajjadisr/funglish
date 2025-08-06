@@ -5,250 +5,98 @@
   <title>فهرست داستان‌ها - فانگلیش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<style>
-    /* Base styles and reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Vazirmatn', 'Tahoma', sans-serif;
-}
-
-body {
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
-  direction: rtl;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Header styles */
-header {
-  background: linear-gradient(90deg, #1a2a6c, #4b6cb7);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.logo {
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.logo:hover {
-  color: #FFD700;
-  transform: scale(1.05);
-}
-
-/* Main content styles */
-main {
-  padding: 40px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: #2c3e50;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #1a2a6c, #4b6cb7);
-  border-radius: 2px;
-}
-
-/* Story list styles */
-#story-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.story-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.story-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
-.story-header {
-  padding: 20px 20px 0;
-}
-
-.story-title {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-.story-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.story-level {
-  background: #e1f0fa;
-  color: #1a2a6c;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.story-content {
-  padding: 0 20px 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.story-description {
-  color: #7f8c8d;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.story-link {
-  display: inline-block;
-  background: linear-gradient(90deg, #1a2a6c, #4b6cb7);
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.3s ease;
-  align-self: flex-start;
-}
-
-.story-link:hover {
-  background: linear-gradient(90deg, #4b6cb7, #1a2a6c);
-  transform: scale(1.05);
-}
-
-/* Loading and empty states */
-.loading {
-  text-align: center;
-  padding: 50px;
-  font-size: 1.2rem;
-  color: #7f8c8d;
-}
-
-.loading i {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  display: block;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.empty-state {
-  text-align: center;
-  padding: 50px 20px;
-  color: #7f8c8d;
-  grid-column: 1 / -1;
-}
-
-.empty-state i {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  color: #bdc3c7;
-}
-
-.empty-state h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #2c3e50;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
-  #story-container {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  
-  .header-content {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  #story-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .section-title {
-    font-size: 1.6rem;
-  }
-  
-  .story-title {
-    font-size: 1.2rem;
-  }
-}
-</style>
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">رفتن به محتوا</a>
   <header>
     <div class="container header-content">
-      <a href="../index.html" class="logo">فانگلیش</a>
+      <a href="../index.html" class="logo" tabindex="0" aria-label="صفحه اصلی فانگلیش">
+        <i class="fas fa-language"></i>
+        فانگلیش
+      </a>
+      <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
+        <i class="fas fa-moon"></i>
+        <span id="theme-text">حالت تیره</span>
+      </button>
     </div>
   </header>
-  <main class="container">
+  <main class="container" id="main-content">
     <h1 class="section-title">داستان‌های انگلیسی با ترجمه</h1>
-    <div id="story-list" id="story-container" class="loaded-content"></div>
+    <div id="story-container" class="loaded-content"></div>
   </main>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section" id="about">
+          <h3>درباره فانگلیش</h3>
+          <ul>
+            <li><a href="#mission">ماموریت ما</a></li>
+            <li><a href="#team">تیم ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>منابع</h3>
+          <ul>
+            <li><a href="#blog">وبلاگ</a></li>
+            <li><a href="#tutorials">آموزش‌ها</a></li>
+            <li><a href="#faq">سوالات متداول</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>قوانین</h3>
+          <ul>
+            <li><a href="#privacy">حریم خصوصی</a></li>
+            <li><a href="#terms">شرایط استفاده</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>شبکه‌های اجتماعی</h3>
+          <ul>
+            <li><a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i> تلگرام</a></li>
+            <li><a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i> اینستاگرام</a></li>
+            <li><a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i> یوتیوب</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      const themeText = document.getElementById('theme-text');
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme ? savedTheme : (prefersDarkScheme ? 'dark' : 'light');
+      document.body.classList.toggle('dark-mode', initialTheme === 'dark');
+      updateToggleUI(initialTheme);
+      function toggleTheme() {
+          const isDarkMode = document.body.classList.contains('dark-mode');
+          const newTheme = isDarkMode ? 'light' : 'dark';
+          document.body.classList.toggle('dark-mode', newTheme === 'dark');
+          localStorage.setItem('theme', newTheme);
+          updateToggleUI(newTheme);
+      }
+      function updateToggleUI(theme) {
+          if (theme === 'dark') {
+              themeIcon.className = 'fas fa-sun';
+              themeText.textContent = 'حالت نور';
+          } else {
+              themeIcon.className = 'fas fa-moon';
+              themeText.textContent = 'حالت تیره';
+          }
+      }
+      themeToggle.addEventListener('click', toggleTheme);
+    });
+  </script>
   <script src="../js/stories-loader.js"></script>
 </body>
 </html>
