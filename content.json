@@ -1,0 +1,45 @@
+[
+  {
+    "title": "A Day at the Park",
+    "english_text": "Today, I went to the park. I saw many children playing and families having a picnic. The weather was sunny and everyone was happy.",
+    "farsi_translation": "امروز به پارک رفتم. بچه‌های زیادی را دیدم که بازی می‌کردند و خانواده‌هایی که پیک‌نیک داشتند. هوا آفتابی بود و همه خوشحال بودند.",
+    "vocabulary_list": [
+      { "word": "park", "meaning": "پارک" },
+      { "word": "children", "meaning": "بچه‌ها" },
+      { "word": "playing", "meaning": "بازی کردن" },
+      { "word": "families", "meaning": "خانواده‌ها" },
+      { "word": "picnic", "meaning": "پیک‌نیک" },
+      { "word": "weather", "meaning": "هوا" },
+      { "word": "sunny", "meaning": "آفتابی" },
+      { "word": "happy", "meaning": "خوشحال" }
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Ordering Food",
+    "english_text": "She went to a restaurant and ordered a salad and a glass of water. The waiter brought her food quickly.",
+    "farsi_translation": "او به رستوران رفت و یک سالاد و یک لیوان آب سفارش داد. گارسون غذایش را سریع آورد.",
+    "vocabulary_list": [
+      { "word": "restaurant", "meaning": "رستوران" },
+      { "word": "ordered", "meaning": "سفارش داد" },
+      { "word": "salad", "meaning": "سالاد" },
+      { "word": "glass", "meaning": "لیوان" },
+      { "word": "waiter", "meaning": "گارسون" },
+      { "word": "quickly", "meaning": "سریع" }
+    ],
+    "level": "A2"
+  },
+  {
+    "title": "Traveling Abroad",
+    "english_text": "Last year, I traveled to France. I visited museums, tried new food, and learned about French culture.",
+    "farsi_translation": "سال گذشته به فرانسه سفر کردم. از موزه‌ها بازدید کردم، غذاهای جدید امتحان کردم و درباره فرهنگ فرانسوی یاد گرفتم.",
+    "vocabulary_list": [
+      { "word": "traveled", "meaning": "سفر کردم" },
+      { "word": "museums", "meaning": "موزه‌ها" },
+      { "word": "food", "meaning": "غذا" },
+      { "word": "culture", "meaning": "فرهنگ" },
+      { "word": "visited", "meaning": "بازدید کردم" }
+    ],
+    "level": "B1"
+  }
+]
