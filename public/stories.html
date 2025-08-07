@@ -16,10 +16,24 @@
         <i class="fas fa-language"></i>
         فانگلیش
       </a>
-      <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
-        <i class="fas fa-moon"></i>
-        <span id="theme-text">حالت تیره</span>
-      </button>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
+          <i class="fas fa-moon"></i>
+          <span id="theme-text">حالت تیره</span>
+        </button>
+        <button class="toggle-btn" id="login-btn" aria-label="ورود">
+          <i class="fas fa-user"></i> ورود
+        </button>
+        <div id="user-menu" class="user-menu" style="display:none;">
+          <div class="user-chip" title="حساب کاربری">
+            <span id="user-avatar" class="user-avatar">U</span>
+            <span id="user-name" class="user-name">کاربر</span>
+          </div>
+          <button class="toggle-btn" id="logout-btn" aria-label="خروج">
+            <i class="fas fa-sign-out-alt"></i> خروج
+          </button>
+        </div>
+      </div>
     </div>
   </header>
   <main class="container" id="main-content">
@@ -67,6 +81,23 @@
     </div>
   </footer>
 
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="auth-title">
+    <div class="modal-content">
+      <button class="modal-close" id="auth-close" aria-label="بستن">&times;</button>
+      <h2 id="auth-title">ورود</h2>
+      <form id="auth-form" class="auth-form">
+        <label for="auth-name">نام</label>
+        <input id="auth-name" name="name" type="text" placeholder="نام شما" required>
+        <label for="auth-email">ایمیل</label>
+        <input id="auth-email" name="email" type="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn btn-primary" style="margin-top:12px;">
+          ادامه
+        </button>
+      </form>
+    </div>
+  </div>
+
   <script>
     // Theme Toggle
     document.addEventListener('DOMContentLoaded', function() {
@@ -97,6 +128,7 @@
       themeToggle.addEventListener('click', toggleTheme);
     });
   </script>
+  <script src="../js/auth.js"></script>
   <script src="../js/stories-loader.js"></script>
 </body>
 </html>

@@ -554,3 +554,83 @@ body[lang="en"] .content-item {
   background: #bbb;
   border-radius: 6px;
 }
+
+/* Auth Modal and User Menu */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+.modal.show { display: flex; }
+.modal-content {
+  background: #fff;
+  color: #222;
+  padding: 1.5rem;
+  border-radius: 14px;
+  width: 92%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+}
+body.dark-mode .modal-content {
+  background: #2a2f3a;
+  color: #f8f9fa;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+}
+.auth-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+.auth-form input[type="text"],
+.auth-form input[type="email"] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+body.dark-mode .auth-form input[type="text"],
+body.dark-mode .auth-form input[type="email"] {
+  background: #1f2430;
+  border-color: #3a4252;
+  color: #f8f9fa;
+}
+.user-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff9800;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.user-name { font-weight: 600; }
