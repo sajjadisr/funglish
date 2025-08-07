@@ -4,6 +4,29 @@ document.addEventListener('DOMContentLoaded', function() {
     return url.searchParams.get(name);
   }
 
+  // --- Read progress persistence ---
+  const READ_KEY = 'funglish_read_stories';
+  function getReadSet() {
+    try {
+      const raw = localStorage.getItem(READ_KEY);
+      const arr = raw ? JSON.parse(raw) : [];
+      return new Set(Array.isArray(arr) ? arr : []);
+    } catch (_) {
+      return new Set();
+    }
+  }
+  function saveReadSet(set) {
+    localStorage.setItem(READ_KEY, JSON.stringify(Array.from(set)));
+  }
+  function markStoryAsRead(id) {
+    if (!id) return;
+    const set = getReadSet();
+    if (!set.has(id)) {
+      set.add(id);
+      saveReadSet(set);
+    }
+  }
+
   const storyId = getQueryParam('id');
   const container = document.getElementById('story-container');
 
@@ -19,13 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(stories => {
       if (!storyId) {
         // Show list of stories as cards
+        const readSet = getReadSet();
+        const isFa = (document.body.getAttribute('lang') || 'fa') === 'fa';
+        const readLabel = isFa ? 'خوانده شده' : 'Read';
         let html = '<div class="story-list">';
         stories.forEach(story => {
+          const isRead = readSet.has(story.id);
           html += `
-            <div class="story-card">
+            <div class="story-card${isRead ? ' read' : ''}">
               <h2>
                 <a href="stories.html?id=${encodeURIComponent(story.id)}">${story.title}</a>
                 <span class="level">${story.level || ''}</span>
+                ${isRead ? `<span class="read-badge" aria-label="${readLabel}">${readLabel}</span>` : ''}
               </h2>
               <p class="story-preview">${story.sentences[0].en}...</p>
             </div>
@@ -41,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
         showError('داستان پیدا نشد.');
         return;
       }
+
+      // Mark as read when a story is opened
+      markStoryAsRead(story.id);
 
       // Render story with enhanced layout
       let html = `

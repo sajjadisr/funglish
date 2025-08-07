@@ -514,6 +514,25 @@ footer {
   .story-list { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .story-content, .story-card { padding: 1.3rem 1rem; }
 }
+
+/* Read badge styles */
+.story-card .read-badge {
+  display: inline-block;
+  margin-inline-start: 8px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  background: #e0ffe2;
+  color: #0f7b24;
+  border: 1px solid #b6f0bf;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+body.dark-mode .story-card .read-badge {
+  background: #0f3d1a;
+  color: #b6f0bf;
+  border-color: #1f6b33;
+}
+
 @media (max-width: 600px) {
   .container { padding: 0 5px; }
   header { padding: 0.7rem 0; }
