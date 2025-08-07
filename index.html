@@ -162,13 +162,21 @@
       themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i> ${isDark ? 'حالت نور' : 'حالت تیره'}`;
     });
 
-    // Language Toggle (optional, you can expand translations)
+    // Language Toggle with persistence and proper dir/lang handling
     const langToggle = document.getElementById('lang-toggle');
+    function applyLanguage(lang) {
+      document.body.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+      document.documentElement.setAttribute('lang', lang);
+      langToggle.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
+      langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
+    }
+    const savedLang = localStorage.getItem('lang') || 'fa';
+    applyLanguage(savedLang);
     langToggle.addEventListener('click', () => {
-      const currentLang = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
-      document.body.setAttribute('lang', currentLang);
-      langToggle.innerHTML = `<i class="fas fa-globe"></i> ${currentLang === 'fa' ? 'English' : 'فارسی'}`;
-      document.documentElement.setAttribute('dir', currentLang === 'fa' ? 'rtl' : 'ltr');
+      const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
+      localStorage.setItem('lang', next);
+      applyLanguage(next);
     });
   </script>
 

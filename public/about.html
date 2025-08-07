@@ -22,7 +22,7 @@
     .feature-grid { margin-top: 1.5rem; }
   </style>
 </head>
-<body>
+<body lang="fa">
   <a href="#main-content" class="skip-link">رفتن به محتوا</a>
   <header>
     <div class="container header-content">
@@ -31,6 +31,9 @@
         فانگلیش
       </a>
       <div style="display:flex; align-items:center; gap:8px;">
+        <button class="toggle-btn" id="lang-toggle" aria-label="تغییر زبان به انگلیسی">
+          <i class="fas fa-globe"></i> English
+        </button>
         <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
           <i class="fas fa-moon"></i>
           <span id="theme-text">حالت تیره</span>
@@ -160,6 +163,23 @@
         if (theme === 'dark') { themeIcon.className = 'fas fa-sun'; themeText.textContent = 'حالت نور'; }
         else { themeIcon.className = 'fas fa-moon'; themeText.textContent = 'حالت تیره'; }
       }
+
+      // Language Toggle with persistence and proper dir/lang handling
+      const langToggle = document.getElementById('lang-toggle');
+      function applyLanguage(lang) {
+        document.body.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+        document.documentElement.setAttribute('lang', lang);
+        langToggle.innerHTML = `<i class=\"fas fa-globe\"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
+        langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
+      }
+      const savedLang = localStorage.getItem('lang') || 'fa';
+      applyLanguage(savedLang);
+      langToggle.addEventListener('click', () => {
+        const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
+        localStorage.setItem('lang', next);
+        applyLanguage(next);
+      });
     });
   </script>
   <script src="../js/auth.js"></script>

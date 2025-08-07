@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body lang="fa">
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">رفتن به محتوا</a>
   <header>
@@ -17,6 +17,9 @@
         فانگلیش
       </a>
       <div style="display:flex; align-items:center; gap:8px;">
+        <button class="toggle-btn" id="lang-toggle" aria-label="تغییر زبان به انگلیسی">
+          <i class="fas fa-globe"></i> English
+        </button>
         <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
           <i class="fas fa-moon"></i>
           <span id="theme-text">حالت تیره</span>
@@ -99,7 +102,7 @@
   </div>
 
   <script>
-    // Theme Toggle
+    // Theme Toggle (persisted)
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('theme-toggle');
       const themeIcon = themeToggle.querySelector('i');
@@ -126,6 +129,23 @@
           }
       }
       themeToggle.addEventListener('click', toggleTheme);
+
+      // Language Toggle with persistence and proper dir/lang handling
+      const langToggle = document.getElementById('lang-toggle');
+      function applyLanguage(lang) {
+        document.body.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+        document.documentElement.setAttribute('lang', lang);
+        langToggle.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
+        langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
+      }
+      const savedLang = localStorage.getItem('lang') || 'fa';
+      applyLanguage(savedLang);
+      langToggle.addEventListener('click', () => {
+        const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
+        localStorage.setItem('lang', next);
+        applyLanguage(next);
+      });
     });
   </script>
   <script src="../js/auth.js"></script>
