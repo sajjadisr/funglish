@@ -17,7 +17,7 @@
 </head>
 <body lang="fa">
   <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="skip-link">رفتن به محتوا</a>
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_content">رفتن به محتوا</a>
   <header>
     <div class="container header-content">
       <a href="index.html" class="logo" tabindex="0" aria-label="صفحه اصلی فانگلیش">
@@ -26,17 +26,17 @@
       </a>
       <nav aria-label="منوی اصلی">
         <ul>
-          <li><a href="./public/stories.html"><i class="fas fa-book-open"></i> داستان‌ها</a></li>
-          <li><a href="#simple-text"><i class="fas fa-align-left"></i> متن ساده</a></li>
-          <li><a href="#podcasts"><i class="fas fa-headphones"></i> پادکست</a></li>
+          <li><a href="./public/stories.html" data-i18n="nav_stories"><i class="fas fa-book-open"></i> داستان‌ها</a></li>
+          <li><a href="#simple-text" data-i18n="nav_simple_text"><i class="fas fa-align-left"></i> متن ساده</a></li>
+          <li><a href="#podcasts" data-i18n="nav_podcasts"><i class="fas fa-headphones"></i> پادکست</a></li>
           <li class="dropdown">
-            <a href="#" aria-haspopup="true" aria-expanded="false"><i class="fas fa-tools"></i> ابزارها</a>
+            <a href="#" aria-haspopup="true" aria-expanded="false" data-i18n="nav_tools"><i class="fas fa-tools"></i> ابزارها</a>
             <div class="dropdown-content" role="menu">
-              <a href="#subtitle-tool"><i class="fas fa-closed-captioning"></i> زیرنویس هوشمند ویدیو</a>
-              <a href="#vocab-tool"><i class="fas fa-language"></i> یادگیری لغت</a>
+              <a href="#subtitle-tool" data-i18n="tools_subtitle"><i class="fas fa-closed-captioning"></i> زیرنویس هوشمند ویدیو</a>
+              <a href="#vocab-tool" data-i18n="tools_vocab"><i class="fas fa-language"></i> یادگیری لغت</a>
             </div>
           </li>
-          <li><a href="./public/about.html"><i class="fas fa-info-circle"></i> درباره</a></li>
+          <li><a href="./public/about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> درباره</a></li>
         </ul>
       </nav>
       <div style="display:flex; align-items:center; gap:8px;">
@@ -46,7 +46,7 @@
         <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت تیره">
           <i class="fas fa-moon"></i> حالت تیره
         </button>
-        <button class="toggle-btn" id="login-btn" aria-label="ورود">
+        <button class="toggle-btn" id="login-btn" aria-label="ورود" data-i18n="header_login">
           <i class="fas fa-user"></i> ورود
         </button>
         <div id="user-menu" class="user-menu" style="display:none;">
@@ -54,7 +54,7 @@
             <span id="user-avatar" class="user-avatar">U</span>
             <span id="user-name" class="user-name">کاربر</span>
           </div>
-          <button class="toggle-btn" id="logout-btn" aria-label="خروج">
+          <button class="toggle-btn" id="logout-btn" aria-label="خروج" data-i18n="header_logout">
             <i class="fas fa-sign-out-alt"></i> خروج
           </button>
         </div>
@@ -163,6 +163,27 @@
       subtitle_desc: { fa: 'به زودی: با استفاده از فناوری GPT، ویدیوهای انگلیسی را با زیرنویس تعاملی و ترجمه فارسی تماشا کنید.', en: 'Coming soon: watch English videos with interactive subtitles and Persian translation powered by GPT.' },
       coming_soon: { fa: 'به زودی', en: 'Coming Soon' },
       featured_content: { fa: 'محتواهای آموزشی منتخب', en: 'Featured Learning Content' },
+      // Header/Nav
+      skip_to_content: { fa: 'رفتن به محتوا', en: 'Skip to content' },
+      nav_stories: { fa: '<i class="fas fa-book-open"></i> داستان‌ها', en: '<i class="fas fa-book-open"></i> Stories' },
+      nav_simple_text: { fa: '<i class="fas fa-align-left"></i> متن ساده', en: '<i class="fas fa-align-left"></i> Simple Texts' },
+      nav_podcasts: { fa: '<i class="fas fa-headphones"></i> پادکست', en: '<i class="fas fa-headphones"></i> Podcasts' },
+      nav_tools: { fa: '<i class="fas fa-tools"></i> ابزارها', en: '<i class="fas fa-tools"></i> Tools' },
+      nav_about: { fa: '<i class="fas fa-info-circle"></i> درباره', en: '<i class="fas fa-info-circle"></i> About' },
+      tools_subtitle: { fa: '<i class="fas fa-closed-captioning"></i> زیرنویس هوشمند ویدیو', en: '<i class="fas fa-closed-captioning"></i> Smart Video Subtitles' },
+      tools_vocab: { fa: '<i class="fas fa-language"></i> یادگیری لغت', en: '<i class="fas fa-language"></i> Vocabulary' },
+      header_login: { fa: '<i class="fas fa-user"></i> ورود', en: '<i class="fas fa-user"></i> Login' },
+      header_logout: { fa: '<i class="fas fa-sign-out-alt"></i> خروج', en: '<i class="fas fa-sign-out-alt"></i> Logout' },
+      header_theme_dark: { fa: 'حالت تیره', en: 'Dark mode' },
+      header_theme_light: { fa: 'حالت نور', en: 'Light mode' },
+      // Auth modal
+      auth_title: { fa: 'ورود', en: 'Login' },
+      auth_name_label: { fa: 'نام', en: 'Name' },
+      auth_email_label: { fa: 'ایمیل', en: 'Email' },
+      auth_submit: { fa: 'ادامه', en: 'Continue' },
+      // Head tags
+      page_title: { fa: 'فانگلیش - یادگیری انگلیسی با پشتیبانی فارسی', en: 'Funglish - Learn English with Persian Support' },
+      meta_description: { fa: 'یادگیری انگلیسی با پشتیبانی فارسی و ابزارهای تعاملی، داستان‌های کوتاه، متن ساده، پادکست و ترجمه سریع.', en: 'Learn English with Persian support, interactive tools, short stories, simple texts, podcasts, and quick translation.' },
       footer_about: { fa: 'درباره فانگلیش', en: 'About Funglish' },
       footer_mission: { fa: 'ماموریت ما', en: 'Our Mission' },
       footer_team: { fa: 'تیم ما', en: 'Our Team' },
@@ -182,10 +203,16 @@
     };
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
+    function updateThemeToggleUI(lang) {
+      const isDark = document.body.classList.contains('dark-mode');
+      const label = isDark ? (lang === 'fa' ? 'حالت نور' : 'Light mode') : (lang === 'fa' ? 'حالت تیره' : 'Dark mode');
+      const icon = isDark ? 'fa-sun' : 'fa-moon';
+      themeToggle.innerHTML = `<i class="fas ${icon}"></i> ${label}`;
+    }
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i> ${isDark ? 'حالت نور' : 'حالت تیره'}`;
+      const lang = document.body.getAttribute('lang') || 'fa';
+      updateThemeToggleUI(lang);
     });
 
     // Language Toggle with persistence and proper dir/lang handling
@@ -205,10 +232,20 @@
              el.innerHTML = i18n[key][t];
            }
          });
-       window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
+               updateThemeToggleUI(lang);
+        // Update document title and meta description
+        try { document.title = i18n.page_title ? i18n.page_title[lang] : document.title; } catch (e) {}
+        try {
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc && i18n.meta_description && i18n.meta_description[lang]) {
+            metaDesc.setAttribute('content', i18n.meta_description[lang]);
+          }
+        } catch (e) {}
+        window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
      }
     const savedLang = localStorage.getItem('lang') || 'fa';
     applyLanguage(savedLang);
+    updateThemeToggleUI(savedLang);
     langToggle.addEventListener('click', () => {
       const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
       localStorage.setItem('lang', next);
@@ -220,13 +257,13 @@
   <div id="auth-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="auth-title">
     <div class="modal-content">
       <button class="modal-close" id="auth-close" aria-label="بستن">&times;</button>
-      <h2 id="auth-title">ورود</h2>
+             <h2 id="auth-title" data-i18n="auth_title">ورود</h2>
       <form id="auth-form" class="auth-form">
-        <label for="auth-name">نام</label>
+        <label for="auth-name" data-i18n="auth_name_label">نام</label>
         <input id="auth-name" name="name" type="text" placeholder="نام شما" required>
-        <label for="auth-email">ایمیل</label>
+        <label for="auth-email" data-i18n="auth_email_label">ایمیل</label>
         <input id="auth-email" name="email" type="email" placeholder="you@example.com" required>
-        <button type="submit" class="btn btn-primary" style="margin-top:12px;">
+        <button type="submit" class="btn btn-primary" style="margin-top:12px;" data-i18n="auth_submit">
           ادامه
         </button>
       </form>
