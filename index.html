@@ -62,22 +62,16 @@
     </div>
   </header>
 
-  <section class="hero" role="banner">
+     <section class="hero" role="banner">
     <div class="container hero-content">
-      <h1>یادگیری انگلیسی با پشتیبانی فارسی</h1>
-      <p>
+      <h1 data-i18n="hero_title">یادگیری انگلیسی با پشتیبانی فارسی</h1>
+      <p data-i18n="hero_subtitle">
         فانگلیش با داستان کوتاه، متن ساده، و ابزار هوشمند، یادگیری انگلیسی را برای فارسی‌زبانان آسان و جذاب می‌کند. هر محتوایی با ترجمه و توضیح ارائه می‌شود.
       </p>
       <div class="cta-buttons">
-        <a class="btn btn-primary" href="./public/stories.html">
-          <i class="fas fa-book-open"></i> داستان کوتاه
-        </a>
-        <a class="btn btn-secondary" href="#simple-text">
-          <i class="fas fa-align-left"></i> متن ساده
-        </a>
-        <a class="btn btn-secondary" href="#subtitle-tool">
-          <i class="fas fa-closed-captioning"></i> ابزار زیرنویس
-        </a>
+        <a class="btn btn-primary" href="./public/stories.html" data-i18n="cta_stories"><i class="fas fa-book-open"></i> داستان کوتاه</a>
+        <a class="btn btn-secondary" href="#simple-text" data-i18n="cta_simple_text"><i class="fas fa-align-left"></i> متن ساده</a>
+        <a class="btn btn-secondary" href="#subtitle-tool" data-i18n="cta_subtitle_tool"><i class="fas fa-closed-captioning"></i> ابزار زیرنویس</a>
       </div>
     </div>
   </section>
@@ -85,30 +79,30 @@
   <main class="container" id="main-content">
     <!-- متن ساده Section -->
     <section id="simple-text" class="site-description animate__animated animate__fadeIn">
-      <h2>متن‌های ساده انگلیسی با ترجمه</h2>
-      <p>
+      <h2 data-i18n="simple_text_title">متن‌های ساده انگلیسی با ترجمه</h2>
+      <p data-i18n="simple_text_desc">
         گلچینی از متن‌های ساده و کاربردی برای شروع یادگیری انگلیسی. هر متن با ترجمه فارسی و واژگان کلیدی ارائه می‌شود.
       </p>
     </section>
 
     <!-- پادکست Section -->
     <section id="podcasts" class="site-description animate__animated animate__fadeIn">
-      <h2>پادکست‌های آموزشی انگلیسی</h2>
-      <p>
+      <h2 data-i18n="podcasts_title">پادکست‌های آموزشی انگلیسی</h2>
+      <p data-i18n="podcasts_desc">
         به زودی: پادکست‌های کوتاه و قابل فهم برای تقویت شنیداری همراه با ترجمه فارسی و واژگان.
       </p>
     </section>
 
     <!-- ابزار زیرنویس Section -->
     <section id="subtitle-tool" class="subtitle-tool animate__animated animate__fadeIn">
-      <h2>ابزار زیرنویس هوشمند ویدیویی</h2>
-      <p>
+      <h2 data-i18n="subtitle_title">ابزار زیرنویس هوشمند ویدیویی</h2>
+      <p data-i18n="subtitle_desc">
         به زودی: با استفاده از فناوری GPT، ویدیوهای انگلیسی را با زیرنویس تعاملی و ترجمه فارسی تماشا کنید.
       </p>
-      <div class="coming-soon">به زودی</div>
+      <div class="coming-soon" data-i18n="coming_soon">به زودی</div>
     </section>
 
-    <h2 class="section-title">محتواهای آموزشی منتخب</h2>
+    <h2 class="section-title" data-i18n="featured_content">محتواهای آموزشی منتخب</h2>
     <section id="content-container" class="loaded-content" aria-live="polite"></section>
   </main>
 
@@ -116,44 +110,76 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section" id="about">
-          <h3>درباره فانگلیش</h3>
+          <h3 data-i18n="footer_about">درباره فانگلیش</h3>
           <ul>
-            <li><a href="#mission">ماموریت ما</a></li>
-            <li><a href="#team">تیم ما</a></li>
-            <li><a href="#contact">تماس با ما</a></li>
+            <li><a href="#mission" data-i18n="footer_mission">ماموریت ما</a></li>
+            <li><a href="#team" data-i18n="footer_team">تیم ما</a></li>
+            <li><a href="#contact" data-i18n="footer_contact">تماس با ما</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3>منابع</h3>
+          <h3 data-i18n="footer_resources">منابع</h3>
           <ul>
-            <li><a href="#blog">وبلاگ</a></li>
-            <li><a href="#tutorials">آموزش‌ها</a></li>
-            <li><a href="#faq">سوالات متداول</a></li>
+            <li><a href="#blog" data-i18n="footer_blog">وبلاگ</a></li>
+            <li><a href="#tutorials" data-i18n="footer_tutorials">آموزش‌ها</a></li>
+            <li><a href="#faq" data-i18n="footer_faq">سوالات متداول</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3>قوانین</h3>
+          <h3 data-i18n="footer_rules">قوانین</h3>
           <ul>
-            <li><a href="#privacy">حریم خصوصی</a></li>
-            <li><a href="#terms">شرایط استفاده</a></li>
+            <li><a href="#privacy" data-i18n="footer_privacy">حریم خصوصی</a></li>
+            <li><a href="#terms" data-i18n="footer_terms">شرایط استفاده</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3>شبکه‌های اجتماعی</h3>
+          <h3 data-i18n="footer_social">شبکه‌های اجتماعی</h3>
           <ul>
-            <li><a href="https://www.instagram.com/rohallah.sajadi/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام"><i class="fab fa-instagram"></i> اینستاگرام</a></li>
-            <li><a href="https://github.com/sajjadisr/funglish" target="_blank" rel="noopener noreferrer" aria-label="گیت‌هاب"><i class="fab fa-github"></i> گیت‌هاب</a></li>
-            <li><a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i> یوتیوب</a></li>
+            <li><a href="https://www.instagram.com/rohallah.sajadi/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام"><i class="fab fa-instagram"></i> <span data-i18n="footer_instagram">اینستاگرام</span></a></li>
+            <li><a href="https://github.com/sajjadisr/funglish" target="_blank" rel="noopener noreferrer" aria-label="گیت‌هاب"><i class="fab fa-github"></i> <span data-i18n="footer_github">گیت‌هاب</span></a></li>
+            <li><a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i> <span data-i18n="footer_youtube">یوتیوب</span></a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.</p>
+        <p data-i18n="footer_copyright">© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.</p>
       </div>
     </div>
   </footer>
 
   <script>
+    // Simple homepage i18n map
+    const i18n = {
+      hero_title: { fa: 'یادگیری انگلیسی با پشتیبانی فارسی', en: 'Learn English with Persian Support' },
+      hero_subtitle: { fa: 'فانگلیش با داستان کوتاه، متن ساده، و ابزار هوشمند، یادگیری انگلیسی را برای فارسی‌زبانان آسان و جذاب می‌کند. هر محتوایی با ترجمه و توضیح ارائه می‌شود.', en: 'Funglish makes learning English easy and fun for Persian speakers with short stories, simple texts, and smart tools. Every piece comes with translation and explanations.' },
+      cta_stories: { fa: '<i class="fas fa-book-open"></i> داستان کوتاه', en: '<i class="fas fa-book-open"></i> Short Stories' },
+      cta_simple_text: { fa: '<i class="fas fa-align-left"></i> متن ساده', en: '<i class="fas fa-align-left"></i> Simple Texts' },
+      cta_subtitle_tool: { fa: '<i class="fas fa-closed-captioning"></i> ابزار زیرنویس', en: '<i class="fas fa-closed-captioning"></i> Subtitle Tool' },
+      simple_text_title: { fa: 'متن‌های ساده انگلیسی با ترجمه', en: 'Simple English Texts with Translation' },
+      simple_text_desc: { fa: 'گلچینی از متن‌های ساده و کاربردی برای شروع یادگیری انگلیسی. هر متن با ترجمه فارسی و واژگان کلیدی ارائه می‌شود.', en: 'A selection of simple, practical texts to start learning English. Each comes with Persian translation and key vocabulary.' },
+      podcasts_title: { fa: 'پادکست‌های آموزشی انگلیسی', en: 'Educational English Podcasts' },
+      podcasts_desc: { fa: 'به زودی: پادکست‌های کوتاه و قابل فهم برای تقویت شنیداری همراه با ترجمه فارسی و واژگان.', en: 'Coming soon: short, easy-to-follow podcasts to improve listening, with Persian translation and vocabulary.' },
+      subtitle_title: { fa: 'ابزار زیرنویس هوشمند ویدیویی', en: 'Smart Video Subtitle Tool' },
+      subtitle_desc: { fa: 'به زودی: با استفاده از فناوری GPT، ویدیوهای انگلیسی را با زیرنویس تعاملی و ترجمه فارسی تماشا کنید.', en: 'Coming soon: watch English videos with interactive subtitles and Persian translation powered by GPT.' },
+      coming_soon: { fa: 'به زودی', en: 'Coming Soon' },
+      featured_content: { fa: 'محتواهای آموزشی منتخب', en: 'Featured Learning Content' },
+      footer_about: { fa: 'درباره فانگلیش', en: 'About Funglish' },
+      footer_mission: { fa: 'ماموریت ما', en: 'Our Mission' },
+      footer_team: { fa: 'تیم ما', en: 'Our Team' },
+      footer_contact: { fa: 'تماس با ما', en: 'Contact Us' },
+      footer_resources: { fa: 'منابع', en: 'Resources' },
+      footer_blog: { fa: 'وبلاگ', en: 'Blog' },
+      footer_tutorials: { fa: 'آموزش‌ها', en: 'Tutorials' },
+      footer_faq: { fa: 'سوالات متداول', en: 'FAQ' },
+      footer_rules: { fa: 'قوانین', en: 'Rules' },
+      footer_privacy: { fa: 'حریم خصوصی', en: 'Privacy' },
+      footer_terms: { fa: 'شرایط استفاده', en: 'Terms' },
+      footer_social: { fa: 'شبکه‌های اجتماعی', en: 'Social' },
+      footer_instagram: { fa: 'اینستاگرام', en: 'Instagram' },
+      footer_github: { fa: 'گیت‌هاب', en: 'GitHub' },
+      footer_youtube: { fa: 'یوتیوب', en: 'YouTube' },
+      footer_copyright: { fa: '© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.', en: '© 2025 Funglish. All rights reserved.' }
+    };
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
@@ -164,13 +190,23 @@
 
     // Language Toggle with persistence and proper dir/lang handling
     const langToggle = document.getElementById('lang-toggle');
-    function applyLanguage(lang) {
-      document.body.setAttribute('lang', lang);
-      document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
-      document.documentElement.setAttribute('lang', lang);
-      langToggle.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
-      langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
-    }
+         function applyLanguage(lang) {
+       document.body.setAttribute('lang', lang);
+       document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+       document.documentElement.setAttribute('lang', lang);
+       langToggle.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
+       langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
+       // Update page text content based on language
+       const t = lang === 'fa' ? 'fa' : 'en';
+       document.querySelectorAll('[data-i18n]')
+         .forEach(el => {
+           const key = el.getAttribute('data-i18n');
+           if (i18n[key] && i18n[key][t] != null) {
+             el.innerHTML = i18n[key][t];
+           }
+         });
+       window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
+     }
     const savedLang = localStorage.getItem('lang') || 'fa';
     applyLanguage(savedLang);
     langToggle.addEventListener('click', () => {

@@ -138,6 +138,12 @@
         document.documentElement.setAttribute('lang', lang);
         langToggle.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fa' ? 'English' : 'فارسی'}`;
         langToggle.setAttribute('aria-label', lang === 'fa' ? 'Switch to English' : 'تغییر زبان به فارسی');
+        // Update read badge language if present
+        const readLabel = lang === 'fa' ? 'خوانده شده' : 'Read';
+        document.querySelectorAll('.read-badge').forEach(el => {
+          el.textContent = readLabel;
+          el.setAttribute('aria-label', readLabel);
+        });
       }
       const savedLang = localStorage.getItem('lang') || 'fa';
       applyLanguage(savedLang);

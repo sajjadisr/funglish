@@ -25,27 +25,45 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch and process the content
+  function renderContent(data) {
+    if (!Array.isArray(data)) throw new Error("Invalid content.json format");
+    container.innerHTML = ""; // Clear previous content (if any)
+    data.forEach(item => {
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "content-item";
+      contentDiv.innerHTML = `
+        <h2>${item.title || ""} <span class="level">${item.level || ""}</span></h2>
+        <div class="english-text"><strong>English:</strong> ${item.english_text || ""}</div>
+        <div class="farsi-translation"><strong>فارسی:</strong> ${item.farsi_translation || ""}</div>
+        ${createVocabList(item.vocabulary_list)}
+      `;
+      container.appendChild(contentDiv);
+    });
+    applyLanguageToContent(document.body.getAttribute('lang') || 'fa');
+  }
+
+  function applyLanguageToContent(lang) {
+    const showEnglish = lang === 'en';
+    document.querySelectorAll('.english-text').forEach(el => {
+      el.style.display = showEnglish ? 'block' : 'none';
+    });
+    document.querySelectorAll('.farsi-translation').forEach(el => {
+      el.style.display = showEnglish ? 'none' : 'block';
+    });
+  }
+
   fetch(contentJsonPath)
     .then(response => {
       if (!response.ok) throw new Error("Failed to load content.json");
       return response.json();
     })
-    .then(data => {
-      if (!Array.isArray(data)) throw new Error("Invalid content.json format");
-      container.innerHTML = ""; // Clear previous content (if any)
-      data.forEach(item => {
-        const contentDiv = document.createElement("div");
-        contentDiv.className = "content-item";
-        contentDiv.innerHTML = `
-          <h2>${item.title || ""} <span class="level">${item.level || ""}</span></h2>
-          <div class="english-text"><strong>English:</strong> ${item.english_text || ""}</div>
-          <div class="farsi-translation"><strong>فارسی:</strong> ${item.farsi_translation || ""}</div>
-          ${createVocabList(item.vocabulary_list)}
-        `;
-        container.appendChild(contentDiv);
-      });
-    })
+    .then(renderContent)
     .catch(error => {
       container.innerHTML = `<div class="error">Error loading content: ${error.message}</div>`;
     });
+
+  // React to global language changes
+  window.addEventListener('language-changed', (e) => {
+    applyLanguageToContent(e.detail.lang);
+  });
 });
