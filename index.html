@@ -20,11 +20,11 @@
   <a href="#main-content" class="skip-link" data-i18n="skip_to_content">رفتن به محتوا</a>
   <header>
     <div class="container header-content">
-      <a href="index.html" class="logo" tabindex="0" aria-label="صفحه اصلی فانگلیش">
+      <a href="index.html" class="logo" tabindex="0" aria-label="صفحه اصلی فانگلیش" data-i18n-attr="aria-label:logo_home_aria">
         <i class="fas fa-language"></i>
         فانگلیش
       </a>
-      <nav aria-label="منوی اصلی">
+      <nav aria-label="منوی اصلی" data-i18n-attr="aria-label:nav_main_aria">
         <ul>
           <li><a href="./public/stories.html" data-i18n="nav_stories"><i class="fas fa-book-open"></i> داستان‌ها</a></li>
           <li><a href="#simple-text" data-i18n="nav_simple_text"><i class="fas fa-align-left"></i> متن ساده</a></li>
@@ -40,21 +40,21 @@
         </ul>
       </nav>
       <div style="display:flex; align-items:center; gap:8px;">
-        <button class="toggle-btn" id="lang-toggle" aria-label="تغییر زبان به انگلیسی">
+        <button class="toggle-btn" id="lang-toggle" aria-label="تغییر زبان به انگلیسی" data-i18n-attr="aria-label:lang_toggle_aria">
           <i class="fas fa-globe"></i> English
         </button>
-        <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت تیره">
+        <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت تیره" data-i18n-attr="aria-label:header_theme_toggle_aria">
           <i class="fas fa-moon"></i> حالت تیره
         </button>
-        <button class="toggle-btn" id="login-btn" aria-label="ورود" data-i18n="header_login">
+        <button class="toggle-btn" id="login-btn" aria-label="ورود" data-i18n="header_login" data-i18n-attr="aria-label:header_login_aria">
           <i class="fas fa-user"></i> ورود
         </button>
         <div id="user-menu" class="user-menu" style="display:none;">
-          <div class="user-chip" title="حساب کاربری">
+          <div class="user-chip" title="حساب کاربری" data-i18n-attr="title:user_menu_title">
             <span id="user-avatar" class="user-avatar">U</span>
             <span id="user-name" class="user-name">کاربر</span>
           </div>
-          <button class="toggle-btn" id="logout-btn" aria-label="خروج" data-i18n="header_logout">
+          <button class="toggle-btn" id="logout-btn" aria-label="خروج" data-i18n="header_logout" data-i18n-attr="aria-label:header_logout_aria">
             <i class="fas fa-sign-out-alt"></i> خروج
           </button>
         </div>
@@ -199,7 +199,18 @@
       footer_instagram: { fa: 'اینستاگرام', en: 'Instagram' },
       footer_github: { fa: 'گیت‌هاب', en: 'GitHub' },
       footer_youtube: { fa: 'یوتیوب', en: 'YouTube' },
-      footer_copyright: { fa: '© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.', en: '© 2025 Funglish. All rights reserved.' }
+      footer_copyright: { fa: '© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.', en: '© 2025 Funglish. All rights reserved.' },
+      // ARIA / placeholders
+      logo_home_aria: { fa: 'صفحه اصلی فانگلیش', en: 'Funglish Home' },
+      nav_main_aria: { fa: 'منوی اصلی', en: 'Main navigation' },
+      lang_toggle_aria: { fa: 'تغییر زبان به انگلیسی', en: 'Switch to Persian' },
+      header_theme_toggle_aria: { fa: 'تغییر حالت تیره', en: 'Toggle dark mode' },
+      header_login_aria: { fa: 'ورود', en: 'Login' },
+      header_logout_aria: { fa: 'خروج', en: 'Logout' },
+      user_menu_title: { fa: 'حساب کاربری', en: 'Account' },
+      auth_close_aria: { fa: 'بستن', en: 'Close' },
+      auth_name_ph: { fa: 'نام شما', en: 'Your name' },
+      auth_email_ph: { fa: 'you@example.com', en: 'you@example.com' }
     };
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
@@ -208,6 +219,10 @@
       const label = isDark ? (lang === 'fa' ? 'حالت نور' : 'Light mode') : (lang === 'fa' ? 'حالت تیره' : 'Dark mode');
       const icon = isDark ? 'fa-sun' : 'fa-moon';
       themeToggle.innerHTML = `<i class="fas ${icon}"></i> ${label}`;
+      try {
+        const aria = i18n.header_theme_toggle_aria ? i18n.header_theme_toggle_aria[lang] : '';
+        if (aria) themeToggle.setAttribute('aria-label', aria);
+      } catch (_) {}
     }
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
@@ -232,37 +247,48 @@
              el.innerHTML = i18n[key][t];
            }
          });
-               updateThemeToggleUI(lang);
-        // Update document title and meta description
-        try { document.title = i18n.page_title ? i18n.page_title[lang] : document.title; } catch (e) {}
-        try {
-          const metaDesc = document.querySelector('meta[name="description"]');
-          if (metaDesc && i18n.meta_description && i18n.meta_description[lang]) {
-            metaDesc.setAttribute('content', i18n.meta_description[lang]);
-          }
-        } catch (e) {}
-        window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
+       // Update attributes that declare data-i18n-attr like "aria-label:key;placeholder:key2"
+       document.querySelectorAll('[data-i18n-attr]')
+         .forEach(el => {
+           const conf = el.getAttribute('data-i18n-attr') || '';
+           conf.split(';').forEach(pair => {
+             const [attr, k] = pair.split(':').map(s => (s || '').trim());
+             if (!attr || !k) return;
+             const dict = i18n[k];
+             if (dict && dict[t] != null) el.setAttribute(attr, dict[t]);
+           });
+         });
+       updateThemeToggleUI(lang);
+       // Update document title and meta description
+       try { document.title = i18n.page_title ? i18n.page_title[lang] : document.title; } catch (e) {}
+       try {
+         const metaDesc = document.querySelector('meta[name="description"]');
+         if (metaDesc && i18n.meta_description && i18n.meta_description[lang]) {
+           metaDesc.setAttribute('content', i18n.meta_description[lang]);
+         }
+       } catch (e) {}
+       window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
      }
-    const savedLang = localStorage.getItem('lang') || 'fa';
-    applyLanguage(savedLang);
-    updateThemeToggleUI(savedLang);
-    langToggle.addEventListener('click', () => {
-      const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
-      localStorage.setItem('lang', next);
-      applyLanguage(next);
-    });
-  </script>
+     const savedLang = localStorage.getItem('lang') || 'fa';
+     applyLanguage(savedLang);
+     updateThemeToggleUI(savedLang);
+     langToggle.addEventListener('click', () => {
+       const next = document.body.getAttribute('lang') === 'fa' ? 'en' : 'fa';
+       localStorage.setItem('lang', next);
+       applyLanguage(next);
+     });
+   </script>
 
   <!-- Auth Modal -->
   <div id="auth-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="auth-title">
     <div class="modal-content">
-      <button class="modal-close" id="auth-close" aria-label="بستن">&times;</button>
-             <h2 id="auth-title" data-i18n="auth_title">ورود</h2>
+      <button class="modal-close" id="auth-close" aria-label="بستن" data-i18n-attr="aria-label:auth_close_aria">&times;</button>
+      <h2 id="auth-title" data-i18n="auth_title">ورود</h2>
       <form id="auth-form" class="auth-form">
         <label for="auth-name" data-i18n="auth_name_label">نام</label>
-        <input id="auth-name" name="name" type="text" placeholder="نام شما" required>
+        <input id="auth-name" name="name" type="text" placeholder="نام شما" required data-i18n-attr="placeholder:auth_name_ph">
         <label for="auth-email" data-i18n="auth_email_label">ایمیل</label>
-        <input id="auth-email" name="email" type="email" placeholder="you@example.com" required>
+        <input id="auth-email" name="email" type="email" placeholder="you@example.com" required data-i18n-attr="placeholder:auth_email_ph">
         <button type="submit" class="btn btn-primary" style="margin-top:12px;" data-i18n="auth_submit">
           ادامه
         </button>
