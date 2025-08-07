@@ -56,9 +56,23 @@
   function openModal() {
     const modal = document.getElementById('auth-modal');
     if (!modal) return;
+    const nameInput = document.getElementById('auth-name');
+    const emailInput = document.getElementById('auth-email');
+    const titleEl = document.getElementById('auth-title');
+    const existing = getStoredUser();
+
+    if (existing) {
+      if (titleEl) titleEl.textContent = 'ویرایش حساب';
+      if (nameInput) nameInput.value = existing.name || '';
+      if (emailInput) emailInput.value = existing.email || '';
+    } else {
+      if (titleEl) titleEl.textContent = 'ورود';
+      if (nameInput) nameInput.value = '';
+      if (emailInput) emailInput.value = '';
+    }
+
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
-    const nameInput = document.getElementById('auth-name');
     if (nameInput) nameInput.focus();
   }
 
@@ -85,11 +99,14 @@
       return () => listeners.delete(callback);
     },
     signIn({ name, email }) {
+      const existing = getStoredUser();
+      const now = new Date().toISOString();
       const user = {
-        id: 'local-' + Math.random().toString(36).slice(2),
+        id: existing?.id || ('local-' + Math.random().toString(36).slice(2)),
         name: (name || '').trim(),
         email: (email || '').trim(),
-        createdAt: new Date().toISOString()
+        createdAt: existing?.createdAt || now,
+        updatedAt: now
       };
       saveUser(user);
       updateHeaderUI(user);
@@ -110,13 +127,18 @@
   document.addEventListener('DOMContentLoaded', function() {
     // Wire up header buttons
     const loginBtn = document.getElementById('login-btn');
-    const logoutBtn = document.getElementById('logout-btn');
+    const profileBtn = document.getElementById('profile-btn');
     const modal = document.getElementById('auth-modal');
     const modalClose = document.getElementById('auth-close');
     const form = document.getElementById('auth-form');
 
     if (loginBtn) {
       loginBtn.addEventListener('click', function() {
+        openModal();
+      });
+    }
+    if (profileBtn) {
+      profileBtn.addEventListener('click', function() {
         openModal();
       });
     }
