@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Skip if explicitly disabled
+if [ "${SKIP_PROGRESS_HOOK:-0}" = "1" ]; then
+  exit 0
+fi
+
+# Skip logging for progress commits themselves to avoid loops
 MSG=$(git log -1 --pretty=%B | head -n1 | tr -d '\r')
+if echo "$MSG" | grep -qE '^chore\(progress\):'; then
+  exit 0
+fi
+
 DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+SHA=$(git rev-parse --short HEAD)
 {
   echo ""
   echo "### $DATE"
-  echo "- Commit: $(git rev-parse --short HEAD) — $MSG"
+  echo "- Commit: $SHA — $MSG"
 } >> /workspace/docs/ASSISTANT_PROGRESS.md
 
 git add /workspace/docs/ASSISTANT_PROGRESS.md
-(git commit -m "chore(progress): auto-log post-commit" >/dev/null 2>&1) || true
+# Make a separate commit; ensure this hook does not recurse
+SKIP_PROGRESS_HOOK=1 git commit -m "chore(progress): auto-log commit $SHA" >/dev/null 2>&1 || true
