@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>درباره من - فانگلیش</title>
+  <meta name="description" content="آشنایی با سازنده فانگلیش و راه‌های ارتباطی">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .about-card { max-width: 900px; margin: -80px auto 0; position: relative; z-index: 1; }
+    .about-header { display: grid; grid-template-columns: 120px 1fr; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .about-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #ff9800, #ffb74d); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    .about-name { font-size: 1.9rem; color: #2a5298; margin-bottom: 0.25rem; }
+    body.dark-mode .about-name { color: #ff9800; }
+    .about-role { color: #666; }
+    body.dark-mode .about-role { color: #ccc; }
+    .about-body { margin-top: 1rem; color: #333; }
+    body.dark-mode .about-body { color: #ddd; }
+    .social-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1.25rem; }
+    .social-cta a { display: inline-flex; align-items: center; gap: 8px; }
+    .feature-grid { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">رفتن به محتوا</a>
+  <header>
+    <div class="container header-content">
+      <a href="../index.html" class="logo" aria-label="صفحه اصلی فانگلیش">
+        <i class="fas fa-language"></i>
+        فانگلیش
+      </a>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="toggle-btn" id="theme-toggle" aria-label="تغییر حالت نور/تاریک">
+          <i class="fas fa-moon"></i>
+          <span id="theme-text">حالت تیره</span>
+        </button>
+        <button class="toggle-btn" id="login-btn" aria-label="ورود">
+          <i class="fas fa-user"></i> ورود
+        </button>
+        <div id="user-menu" class="user-menu" style="display:none;">
+          <div class="user-chip" title="حساب کاربری">
+            <span id="user-avatar" class="user-avatar">U</span>
+            <span id="user-name" class="user-name">کاربر</span>
+          </div>
+          <button class="toggle-btn" id="logout-btn" aria-label="خروج">
+            <i class="fas fa-sign-out-alt"></i> خروج
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="container hero-content">
+      <h1>درباره سازنده فانگلیش</h1>
+      <p>اینجا درباره مسیر ساخت فانگلیش و راه‌های ارتباط با من می‌خوانید.</p>
+    </div>
+  </section>
+
+  <main class="container" id="main-content">
+    <section class="story-content about-card" aria-label="کارت معرفی">
+      <div class="about-header">
+        <div class="about-avatar" aria-hidden="true">RS</div>
+        <div>
+          <div class="about-name">روح‌الله سجادی</div>
+          <div class="about-role">سازنده و توسعه‌دهنده فانگلیش</div>
+          <div class="social-cta">
+            <a class="btn" href="https://www.instagram.com/rohallah.sajadi/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام روح‌الله سجادی">
+              <i class="fab fa-instagram"></i> اینستاگرام
+            </a>
+            <a class="btn" href="https://github.com/sajjadisr/funglish" target="_blank" rel="noopener noreferrer" aria-label="گیت‌هاب پروژه فانگلیش">
+              <i class="fab fa-github"></i> گیت‌هاب پروژه
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>فانگلیش با هدف ساده‌سازی یادگیری زبان انگلیسی برای فارسی‌زبانان ساخته شده است؛ ترکیبی از محتوای قابل فهم، ترجمه روان و ابزارهای تعاملی.</p>
+        <div class="features feature-grid">
+          <div class="feature-card" tabindex="0">
+            <i class="fas fa-book-open feature-icon" aria-hidden="true"></i>
+            <h3>متن و داستان‌های ساده</h3>
+            <p>محتوای کوتاه و کاربردی، همراه با ترجمه فارسی و واژگان کلیدی.</p>
+          </div>
+          <div class="feature-card" tabindex="0">
+            <i class="fas fa-language feature-icon" aria-hidden="true"></i>
+            <h3>یادگیری واژگان</h3>
+            <p>تمرکز بر واژه‌های پرتکرار با مثال‌های روشن و قابل فهم.</p>
+          </div>
+          <div class="feature-card" tabindex="0">
+            <i class="fas fa-headphones feature-icon" aria-hidden="true"></i>
+            <h3>پادکست‌های آموزشی</h3>
+            <p>به‌زودی: تقویت شنیداری با محتوای کوتاه و همراه با ترجمه.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>شبکه‌های اجتماعی</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/rohallah.sajadi/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام"><i class="fab fa-instagram"></i> اینستاگرام</a></li>
+            <li><a href="https://github.com/sajjadisr/funglish" target="_blank" rel="noopener noreferrer" aria-label="گیت‌هاب"><i class="fab fa-github"></i> گیت‌هاب</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>لینک‌های سریع</h3>
+          <ul>
+            <li><a href="../index.html">خانه</a></li>
+            <li><a href="./stories.html">داستان‌ها</a></li>
+            <li><a href="./about.html">درباره</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© ۲۰۲۵ فانگلیش. تمام حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="auth-title">
+    <div class="modal-content">
+      <button class="modal-close" id="auth-close" aria-label="بستن">&times;</button>
+      <h2 id="auth-title">ورود</h2>
+      <form id="auth-form" class="auth-form">
+        <label for="auth-name">نام</label>
+        <input id="auth-name" name="name" type="text" placeholder="نام شما" required>
+        <label for="auth-email">ایمیل</label>
+        <input id="auth-email" name="email" type="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn btn-primary" style="margin-top:12px;">ادامه</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Theme Toggle (persisted)
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      const themeText = document.getElementById('theme-text');
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initial = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+      document.body.classList.toggle('dark-mode', initial === 'dark');
+      updateToggleUI(initial);
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        const next = isDark ? 'light' : 'dark';
+        document.body.classList.toggle('dark-mode', next === 'dark');
+        localStorage.setItem('theme', next);
+        updateToggleUI(next);
+      });
+      function updateToggleUI(theme) {
+        if (theme === 'dark') { themeIcon.className = 'fas fa-sun'; themeText.textContent = 'حالت نور'; }
+        else { themeIcon.className = 'fas fa-moon'; themeText.textContent = 'حالت تیره'; }
+      }
+    });
+  </script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
