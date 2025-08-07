@@ -634,3 +634,23 @@ body.dark-mode .auth-form input[type="email"] {
   font-weight: bold;
 }
 .user-name { font-weight: 600; }
+
+/* Read state styles */
+.story-card.read {
+  border: 1px solid #3bb273;
+  background: linear-gradient(0deg, rgba(59,178,115,0.08), rgba(59,178,115,0.08)), #fff;
+}
+body.dark-mode .story-card.read {
+  background: linear-gradient(0deg, rgba(59,178,115,0.12), rgba(59,178,115,0.12)), #2a2f3a;
+  border-color: #3bb273;
+}
+.badge-read {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: #3bb273;
+  color: #fff;
+  vertical-align: middle;
+}

@@ -1,6 +1,7 @@
 // js/auth.js
 (function() {
   const STORAGE_KEY = 'funglish_user';
+  const GUEST_READ_KEY = 'guest_readStories';
 
   function getStoredUser() {
     try {
@@ -9,6 +10,20 @@
     } catch (e) {
       return null;
     }
+  }
+
+  function getGuestReadSet() {
+    try {
+      const raw = localStorage.getItem(GUEST_READ_KEY);
+      const arr = raw ? JSON.parse(raw) : [];
+      return new Set(Array.isArray(arr) ? arr : []);
+    } catch (_) {
+      return new Set();
+    }
+  }
+
+  function setGuestReadSet(set) {
+    localStorage.setItem(GUEST_READ_KEY, JSON.stringify(Array.from(set)));
   }
 
   function saveUser(user) {
@@ -94,6 +109,34 @@
     getUser() {
       return getStoredUser();
     },
+    getReadStories() {
+      const user = getStoredUser();
+      if (user && Array.isArray(user.readStoryIds)) return user.readStoryIds;
+      return Array.from(getGuestReadSet());
+    },
+    isStoryRead(storyId) {
+      if (!storyId) return false;
+      const user = getStoredUser();
+      if (user && Array.isArray(user.readStoryIds)) {
+        return user.readStoryIds.includes(storyId);
+      }
+      return getGuestReadSet().has(storyId);
+    },
+    markStoryRead(storyId) {
+      if (!storyId) return;
+      const user = getStoredUser();
+      if (user) {
+        const existing = Array.isArray(user.readStoryIds) ? new Set(user.readStoryIds) : new Set();
+        existing.add(storyId);
+        user.readStoryIds = Array.from(existing);
+        saveUser(user);
+        emitChange(user);
+        return;
+      }
+      const guest = getGuestReadSet();
+      guest.add(storyId);
+      setGuestReadSet(guest);
+    },
     onChange(callback) {
       if (typeof callback === 'function') listeners.add(callback);
       return () => listeners.delete(callback);
@@ -101,14 +144,18 @@
     signIn({ name, email }) {
       const existing = getStoredUser();
       const now = new Date().toISOString();
+      const guestRead = Array.from(getGuestReadSet());
       const user = {
         id: existing?.id || ('local-' + Math.random().toString(36).slice(2)),
         name: (name || '').trim(),
         email: (email || '').trim(),
         createdAt: existing?.createdAt || now,
-        updatedAt: now
+        updatedAt: now,
+        readStoryIds: Array.from(new Set([...(existing?.readStoryIds || []), ...guestRead]))
       };
       saveUser(user);
+      // clear guest read markers after merging
+      try { localStorage.removeItem(GUEST_READ_KEY); } catch (_) {}
       updateHeaderUI(user);
       emitChange(user);
       closeModal();
