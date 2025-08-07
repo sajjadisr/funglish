@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MSG=$(git log -1 --pretty=%B | head -n1 | tr -d '\r')
+DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+{
+  echo ""
+  echo "### $DATE"
+  echo "- Commit: $(git rev-parse --short HEAD) — $MSG"
+} >> /workspace/docs/ASSISTANT_PROGRESS.md
+
+git add /workspace/docs/ASSISTANT_PROGRESS.md
+(git commit -m "chore(progress): auto-log post-commit" >/dev/null 2>&1) || true
